@@ -98,7 +98,7 @@ async function run() {
     }
 
     if (deadItems.length > 0) {
-        let msg = `⚠️ [LNY Movie Radar] พบลิงก์เสีย (${deadItems.length} รายการ)\n\n`;
+        let msg = `⚠️️ [LNY Movie Radar] พบลิงก์เสีย (${deadItems.length} รายการ)\n\n`;
         deadItems.forEach((d, i) => {
             msg += `${i + 1}. ${d.title}\n• ลิงก์: ${d.link}\n• สาเหตุ: ${d.reason}\n\n`;
         });
