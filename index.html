@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- อนุญาตให้แสดงภาพปกจากเซิร์ฟเวอร์ภายนอก (YouTube / TMDB) -->
+  <meta name="referrer" content="no-referrer">
+  
+  <!-- ปรับ Title ให้มีคีย์เวิร์ด และแก้ & เป็น &amp; เพื่อลบไฟเตือน -->
+  <title>LNY Movie Radar - เช็ครอบหนัง โปรตั๋ว SF Major &amp; สารบัญหนังดูฟรีถูกลิขสิทธิ์</title>
+  
+ <!-- เมตาแท็กพื้นฐานและดักบอท Google -->
+  <meta name="description" content="LNY Movie Radar เรดาร์ชี้เป้าสื่อบันเทิง หนังไทยคลาสสิก สารคดี อนิเมะ ดูฟรีถูกลิขสิทธิ์ เช็ครอบฉายโรงภาพยนตร์ พร้อมโปรโมชันตั๋วหนังและบัตรเติมเงิน">
+  
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+
+  <!-- Schema.org สำหรับ Search Engine (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "LNY Movie Radar",
+    "url": "https://movie.lny.com",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://movie.lny.com/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+</head>
+<body>
+
+<!-- แถบเมนูด้านบน ตรึงติดขอบบนตลอดเวลา (Sticky Navbar หน้าแข็ง รวมดีลและปุ่มสนับสนุน) -->
+<header class="sticky-nav">
+  <div class="nav-container">
+    
+    <!-- ฝั่งซ้าย: โลโก้เว็บ -->
+    <div class="nav-brand">
+      <img src="logo.png" alt="LNY Movie Radar" class="nav-logo" onclick="location.reload()">
+      <div class="brand-text">
+        <span class="brand-title">LNY RADAR</span>
+        <span class="brand-sub">เรดาร์ชี้เป้าสื่อบันเทิง &amp; สารคดี</span>
+      </div>
+    </div>
+    
+   <div class="nav-deals-hub">
+      <!-- 🎟️ ดรอปดาวน์ตั๋วหนังลดราคา (Shopee / Lazada) -->
+      <div class="deal-dropdown">
+        <button type="button" class="chip-deal chip-shopee dropdown-btn" onclick="toggleDropdown('ticketDrop', event)">
+          🎟️ โปรตั๋วหนังลด ▾
+        </button>
+        <div class="dropdown-menu" id="ticketDrop">
+          <a id="linkNavShopeeMovie" href="#" target="_blank" rel="noopener noreferrer sponsored">
+            🧡 โค้ดตั๋วหนัง Major &amp; SF (Shopee)
+          </a>
+          <a id="linkNavLazadaMovie" href="#" target="_blank" rel="noopener noreferrer sponsored">
+            💙 โค้ดตั๋วหนัง Major &amp; SF (Lazada)
+          </a>
+        </div>
+      </div>
+    
+      <!-- 1. ดรอปดาวน์เติมเกม -->
+      <div class="deal-dropdown">
+        <button type="button" class="chip-deal chip-game dropdown-btn" onclick="toggleDropdown('gameDrop', event)">
+          🎮 เติมเกม ▾
+        </button>
+        <div class="dropdown-menu" id="gameDrop">
+          <a id="linkCodashop" href="#" target="_blank" rel="noopener noreferrer sponsored">⚡ Codashop (เติมตรง ROV, Free Fire)</a>
+          <a id="linkSeagmGame" href="#" target="_blank" rel="noopener noreferrer sponsored">💳 SEAGM (Steam, บัตรเกมสากล)</a>
+          <a id="linkShopeeGame" href="#" target="_blank" rel="noopener noreferrer sponsored">🎟️ ดีลโค้ดเกมลดราคา (Shopee)</a>
+        </div>
+      </div>
+
+      <!-- 2. ดรอปดาวน์สตรีมมิ่ง & บัตรของขวัญ -->
+      <div class="deal-dropdown">
+        <button type="button" class="chip-deal chip-stream dropdown-btn" onclick="toggleDropdown('streamDrop', event)">
+          📺 บัตรสตรีมมิ่ง &amp; ของขวัญ ▾
+        </button>
+        <div class="dropdown-menu" id="streamDrop">
+          <a id="linkNetflixShopee" href="#" target="_blank" rel="noopener noreferrer sponsored">🎬 โค้ด Netflix / Monomax (Shopee)</a>
+          <a id="linkSeagmGift" href="#" target="_blank" rel="noopener noreferrer sponsored">🎁 บัตรของขวัญดิจิทัล (SEAGM)</a>
+          <a id="linkLazadaStream" href="#" target="_blank" rel="noopener noreferrer sponsored">🏷️ โค้ดส่วนลดสตรีมมิ่ง (Lazada)</a>
+        </div>
+      </div>
+
+      <!-- 3. ดรอปดาวน์เช่า Cloud เล่นเกม -->
+      <div class="deal-dropdown">
+        <button type="button" class="chip-deal chip-cloud dropdown-btn" onclick="toggleDropdown('cloudDrop', event)">
+          ☁️ เช่า Cloud เล่นเกม ▾
+        </button>
+        <div class="dropdown-menu" id="cloudDrop">
+          <a id="linkGeforceNow" href="#" target="_blank" rel="noopener noreferrer sponsored">🚀 GeForce NOW Thailand (Bro.game)</a>
+          <a id="linkCloudShopee" href="#" target="_blank" rel="noopener noreferrer sponsored">📦 แพ็กเกจโค้ดเช่า Cloud (Shopee)</a>
+        </div>
+      </div>
+
+      <!-- [ย้ายขึ้นมาไว้ด้านบน] ปุ่มเช็ครอบฉายโรงหนัง Major & SF เพื่อความโปร่งตา -->
+      <a href="https://www.majorcineplex.com/movie" target="_blank" rel="noopener noreferrer" class="chip-deal" style="background: #e11d48; color: #fff; text-decoration: none;" title="เช็ครอบฉาย Major Cineplex">
+        🍿 เช็ครอบ Major
+      </a>
+      <a href="https://www.sfcinemacity.com/showtime" target="_blank" rel="noopener noreferrer" class="chip-deal" style="background: #0284c7; color: #fff; text-decoration: none;" title="เช็ครอบฉาย SF Cinema">
+        🍿 เช็ครอบ SF
+      </a>
+    </div>
+
+    <!-- ฝั่งขวา: ปุ่ม 3 เกลอ -->
+    <div class="nav-actions">
+      <button type="button" class="btn-action btn-bookmark" onclick="openBookmarkModal()" title="บันทึกหน้าโฮม">
+        ⭐️ <span>บันทึกหน้าโฮม</span>
+      </button>
+
+      <a href="https://www.buymeacoffee.com/nacadoy2j" target="_blank" rel="noopener noreferrer sponsored" class="btn-action btn-coffee-nav" title="เลี้ยงกาแฟ">
+        ☕ <span>Buy Me Coffee</span>
+      </a>
+
+      <button type="button" class="btn-action btn-promptpay-nav" onclick="openSupportTray()" title="สนับสนุนผ่านพร้อมเพย์">
+        📱 <span>พร้อมเพย์</span>
+      </button>
+    </div>
+
+  </div>
+</header>
+
+<div class="container">
+  
+  <!-- กล่องข้อมูล SEO & ความปลอดภัยแบบ Accordion ยุบเก็บได้ (Googlebot อ่านได้ครบ 100%) -->
+  <div style="max-width: 860px; margin: 15px auto 10px; padding: 0 10px;">
+    <details style="background: rgba(30, 41, 59, 0.7); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; overflow: hidden; cursor: pointer;">
+      <summary style="padding: 10px 15px; font-size: 0.9rem; color: #cbd5e1; display: flex; justify-content: space-between; align-items: center; user-select: none;">
+        <span>ℹ️ <b>ศูนย์รวมข้อมูลภาพยนตร์</b> โปรตั๋วหนัง &amp; ชี้เป้าหนังดูฟรีถูกลิขสิทธิ์</span>
+        <span style="font-size: 0.75rem; color: #38bdf8;">(คลิกอ่านรายละเอียด ▾)</span>
+      </summary>
+      <div style="padding: 12px 18px; font-size: 0.83rem; line-height: 1.6; color: #94a3b8; border-top: 1px solid rgba(255,255,255,0.06);">
+        <h1 style="font-size: 1.05rem; color: #f8fafc; margin-bottom: 6px;">LNY Movie Radar แพลตฟอร์มค้นหาและตรวจสอบรอบฉายภาพยนตร์</h1>
+        <p style="margin-bottom: 8px;">
+          รวบรวมรอบฉายจาก Major Cineplex และ SF Cinema พร้อมชี้เป้าสิทธิพิเศษ ส่วนลดตั๋วหนัง โค้ดส่วนลดจาก Shopee &amp; Lazada บัตรเติมเกม บัตรสตรีมมิ่ง 
+          ตลอดจนสารบัญภาพยนตร์คลาสสิก สารคดี อนิเมะ ที่สามารถรับชมได้อย่างถูกลิขสิทธิ์
+        </p>
+        <p style="color: #38bdf8; margin: 0;">
+          🛡️ <b>ศูนย์ค้นหาปลอดภัย 100%:</b> เชื่อมสัญญาณตรงสู่ห้องฉายทางการของ YouTube, Bilibili และสารบัญ Google ไม่มีโฆษณาหลอกลวง
+        </p>
+      </div>
+    </details>
+  </div>
+
+  <!-- แถบค้นหาแบบกระชับ (Search Bar) คู่กับปุ่มเปิดกรุหนังสำรองในแถวเดียว -->
+  <div style="display: flex; justify-content: center; align-items: center; gap: 10px; max-width: 860px; margin: 12px auto 16px; padding: 0 10px; flex-wrap: wrap;">
+    <div style="display: flex; flex: 1; min-width: 280px; max-width: 520px; background: #1e293b; border: 1px solid rgba(56, 189, 248, 0.35); border-radius: 30px; padding: 3px 5px 3px 14px; box-shadow: 0 4px 12px rgba(0,0,0,0.25);">
+      <input 
+        type="text" 
+        id="searchInput" 
+        placeholder="🔍 ค้นหาหนัง ซีรีส์ เช่น สารคดีสัตว์โลก, ดาบมังกรหยก..." 
+        autocomplete="off"
+        style="flex: 1; background: transparent; border: none; outline: none; color: #fff; font-size: 0.88rem;"
+      >
+      <button id="searchBtn" type="button" style="background: linear-gradient(135deg, #0284c7, #0369a1); color: #fff; border: none; padding: 7px 16px; border-radius: 20px; font-size: 0.82rem; font-weight: bold; cursor: pointer;">
+        เคาะเรดาร์
+      </button>
+    </div>
+
+    <!-- ปุ่มเปิดกรุหนังสำรอง ยกขึ้นมาเคียงข้างกัน ไม่กินพื้นที่แถวล่าง -->
+    <button type="button" onclick="toggleArchiveDrawer()" style="background: rgba(30, 41, 59, 0.9); color: #f59e0b; border: 1px solid rgba(245, 158, 11, 0.5); padding: 8px 16px; border-radius: 24px; font-size: 0.82rem; font-weight: bold; cursor: pointer; white-space: nowrap;">
+      📂 กรุหนังสำรอง &amp; สารคดี
+    </button>
+  </div>
+
+  <!-- แถบหมวดหมู่หน้าแรก (เรียงแถวเดียวเลื่อนได้ ไม่เกะกะ) -->
+  <div class="category-bar-container" style="margin-bottom: 20px;">
+    <nav class="categories" id="categoryGroup">
+      <button class="chip active" data-category="all">ทั้งหมด</button>
+      <button class="chip chip-highlight" data-category="หนังชนโรง">🔥 หนังใหม่ชนโรง</button>
+      <button class="chip" data-category="ดูฟรี">🟢 ดูฟรี</button>
+      <button class="chip" data-category="สารคดี">🌍 สารคดีสำรวจโลก</button>
+      <button class="chip" data-category="หนังไทย">หนังไทย 80s-90s</button>
+      <button class="chip" data-category="หนังสงคราม">หนังสงคราม/บู๊</button>
+      <button class="chip" data-category="อนิเมะ">การ์ตูน/อนิเมะ</button>
+    </nav>
+  </div>
+
+  <!-- กระดานแสดงผล: ใส่การ์ดเริ่มต้นให้ Googlebot อ่านเจอเนื้อหาทันที -->
+  <main class="movie-list" id="movieList">
+    <article class="movie-card static-preload">
+      <img src="https://img.youtube.com/vi/G9Z9F_mIqjA/hqdefault.jpg" alt="มือปืน 2 สาละวิน">
+      <h3>มือปืน 2 สาละวิน (2536)</h3>
+      <p>ผลงานบู๊ดุเดือดระดับตำนาน สรพงศ์ ชาตรี ปะทะ ฉัตรชัย เปล่งพานิช ดูฟรีเต็มเรื่องถูกลิขสิทธิ์</p>
+    </article>
+    <article class="movie-card static-preload">
+      <img src="https://img.youtube.com/vi/kYxHjSgM_m8/hqdefault.jpg" alt="สันติ-วีณา">
+      <h3>สันติ-วีณา (2497)</h3>
+      <p>ภาพยนตร์ไทยประวัติศาสตร์ บูรณะ 4K ดูฟรีถูกลิขสิทธิ์จากหอภาพยนตร์</p>
+    </article>
+    <article class="movie-card static-preload">
+      <img src="https://image.tmdb.org/t/p/w500/a9069v4e5q5L4p0S9K0iB4S4V9L.jpg" alt="Rambo: First Blood">
+      <h3>Rambo: First Blood แรมโบ้ ภาค 1</h3>
+      <p>ภาพยนตร์บู๊สงครามคลาสสิก เช่าดูคมชัดระดับ 4K พากย์ไทยถูกลิขสิทธิ์</p>
+    </article>
+  </main>
+</div>
+
+<!-- ถาดสไลด์สนับสนุนค่าน้ำชา -->
+<div id="trayOverlay" class="tray-overlay" onclick="closeSupportTray()"></div>
+
+<div id="supportTray" class="support-tray">
+  <div class="tray-handle"></div>
+  <div class="tray-header">
+    <h3>☕ สนับสนุนค่าน้ำชาบรรณารักษ์ LNY</h3>
+    <button class="btn-close-tray" onclick="closeSupportTray()">&times;</button>
+  </div>
+  <p class="tray-subtitle">ร่วมบำรุงรักษาเซิร์ฟเวอร์เรดาร์ เพื่อให้เปิดบริการฟรี ปลอดภัย ไร้โฆษณาคาสิโน</p>
+
+  <div class="tray-content">
+    <a href="https://www.buymeacoffee.com/nacadoy2j" target="_blank" rel="noopener noreferrer sponsored" class="btn-tray-coffee">
+      ☕ Buy Me a Coffee (บัตรเครดิต/เดบิต/สากล)
+    </a>
+
+    <div class="tray-divider"><span>หรือ สแกนพร้อมเพย์ผ่านแอปธนาคาร</span></div>
+
+    <div class="tray-qr-box">
+      <img src="qrcode.png" alt="QR Code รับเงินพร้อมเพย์" class="tray-qr-img" onerror="this.alt='กรุณาวางไฟล์ qrcode.png ในโฟลเดอร์ web'">
+      <div class="qr-security-note">
+        🔒 <b>ปลอดภัย 100%:</b> บนคอมฯ ใช้โทรศัพท์เปิดแอปธนาคารสแกนได้ทันที / บนมือถือสามารถแคปหน้าจอเพื่อเปิดในแอปธนาคาร
+      </div>
+    </div>
+
+    <button type="button" class="btn-tray-confirm" onclick="confirmTransfer()">
+      ✨ โอนสนับสนุนเรียบร้อยแล้ว (ขอบพระคุณครับ)
+    </button>
+    <div id="thankYouMsg" class="thank-you-badge" style="display: none;">
+      🎉 ขอบพระคุณสำหรับกำลังใจครับ! LNY Movie Radar จะพัฒนาคลังข้อมูลให้ครอบคลุมยิ่งขึ้น
+    </div>
+  </div>
+</div>
+
+<!-- ป๊อปอัปคำแนะนำการบันทึกหน้าโฮม -->
+<div id="bookmarkModal" class="modal-overlay" style="display: none;">
+  <div class="modal-box">
+    <div class="tray-header">
+      <h3>⭐️ เพิ่ม LNY Radar ลงหน้าจอหลัก</h3>
+      <button class="btn-close-tray" onclick="closeBookmarkModal()">&times;</button>
+    </div>
+    <div class="modal-body">
+      <p><b>สำหรับใช้งานบนคอมพิวเตอร์:</b></p>
+      <p class="modal-step">กดปุ่ม <code>Ctrl + D</code> (Windows) เพื่อ Bookmark หน้านี้ไว้ที่แถบเบราว์เซอร์ เข้าดูได้ตลอดเวลา</p>
+      
+      <p style="margin-top: 12px;"><b>สำหรับใช้งานบนมือถือ:</b></p>
+      <p class="modal-step">กดปุ่มเมนู <b>(⋮) หรือปุ่มแชร์</b> ของเบราว์เซอร์ แล้วเลือกคำว่า <b>"เพิ่มลงในหน้าจอหลัก (Add to Home screen)"</b> เพื่อเปิดเป็นแอปบนมือถือได้ทันที</p>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================== -->
+  <!-- 🎬 สารบัญหมวดหมู่ภาพยนตร์ & สื่อบันเทิง (Semantic SEO Directory) -->
+  <!-- ============================================================== -->
+  <section id="seoDirectoryHub" class="container seo-directory-wrapper" aria-labelledby="seo-heading">
+    <!-- ระบบ Auto-Run จะอ่าน archives.json มาสร้าง Semantic Tags ให้บอทอ่านตรงนี้อัตโนมัติ -->
+  </section>
+
+  
+<!-- ส่วนท้ายเว็บไซต์ -->
+<footer style="margin-top: 50px; padding: 25px 15px; text-align: center; border-top: 1px solid #334155; color: #64748b; font-size: 0.85rem; line-height: 1.6;">
+  <p style="margin-bottom: 8px;">© 2026 LNY Movie Radar. สารบัญสื่อบันเทิง รอบฉายภาพยนตร์ และโปรโมชันตั๋วหนังถูกลิขสิทธิ์</p>
+  <p style="margin-bottom: 8px; font-size: 0.75rem; color: #475569;">
+    เว็บไซต์นี้เป็นผู้รวบรวมข้อมูล โดยลิงก์โปรโมชันตั๋วหนังและบริการบางส่วนอาจเป็นลิงก์พันธมิตร (Affiliate) ซึ่งช่วยสนับสนุนการพัฒนาเว็บไซต์
+  </p>
+  <p>
+    <a href="about.html" style="color: #94a3b8; text-decoration: none; margin: 0 10px;">เกี่ยวกับเรา (About Us)</a> | 
+    <a href="privacy.html" style="color: #94a3b8; text-decoration: none; margin: 0 10px;">นโยบายความเป็นส่วนตัว (Privacy Policy)</a>
+  </p>
+</footer>
+
+<!-- แผ่นม่านดำบังพื้นหลังลิ้นชัก -->
+<div id="archiveOverlay" class="archive-overlay" onclick="toggleArchiveDrawer()"></div>
+
+<!-- ตัวกล่องลิ้นชักสไลด์ข้าง -->
+<aside id="archiveDrawer" class="archive-drawer">
+  <div class="archive-fixed-top">
+    <div class="archive-header">
+      <h3>📂 สารบัญสืบค้นหนัง &amp; สารคดี</h3>
+      <div style="display: flex; gap: 8px; align-items: center;">
+        <button type="button" id="btnResizeDrawer" class="btn-resize-archive" onclick="toggleDrawerWidth()" title="ยืด/หดลิ้นชัก">
+          ◀ ขยาย
+        </button>
+        <button type="button" class="btn-close-archive" onclick="toggleArchiveDrawer()">&times;</button>
+      </div>
+    </div>
+    
+    <div class="archive-search-box">
+      <input type="text" id="archiveSearchInput" placeholder="🔍 พิมพ์ค้นชื่อในกรุ..." autocomplete="off">
+    </div>
+
+    <div class="archive-chips-bar" id="archiveChips">
+      <button type="button" class="arch-chip active" onclick="setArchiveCategory('all', this)">ทั้งหมด</button>
+      <button type="button" class="arch-chip" onclick="setArchiveCategory('สารคดี', this)">🌍 สารคดี</button>
+      <button type="button" class="arch-chip" onclick="setArchiveCategory('หนังไทย', this)">🎬 หนังไทย</button>
+      <button type="button" class="arch-chip" onclick="setArchiveCategory('หนังต่างประเทศ', this)">🌐 หนังต่างประเทศ</button>
+      <button type="button" class="arch-chip" onclick="setArchiveCategory('อนิเมะ', this)">⚡ การ์ตูน/อนิเมะ</button>
+      <!-- 🎯 แคปซูลแสดงจำนวนเรื่อง (วางต่อท้ายตรงนี้) -->
+  <span id="archiveCountBadge" class="archive-count-badge">0 เรื่อง</span>
+    </div>
+  </div>
+
+  <div id="archiveList" class="archive-list-box"></div>
+</aside>
+
+</body>
+</html>

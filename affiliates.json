@@ -1,0 +1,92 @@
+[
+  {
+    "id": "linkNavShopeeMovie",
+    "title": "โค้ดตั๋วหนัง Major & SF (Shopee)",
+    "description": "ส่วนลดและดีลตั๋วชมภาพยนตร์ราคาพิเศษผ่านแอป Shopee",
+    "category": "cinema_ticket",
+    "badge": "🎟️ ตั๋วลด Shopee",
+    "url": "https://s.shopee.co.th/1AEvAlGU1",
+    "fallbackUrl": "https://shopee.co.th"
+  },
+  {
+    "id": "linkNavLazadaMovie",
+    "title": "โค้ดตั๋วหนัง Major & SF (Lazada)",
+    "description": "คูปองส่วนลดตั๋วหนังเครือเมเจอร์และเอสเอฟผ่าน Lazada",
+    "category": "cinema_ticket",
+    "badge": "🎟️ ตั๋วลด Lazada",
+    "url": "https://s.lazada.co.th/s.ZQNk9e?c=d&t=p-i6PRbfC-s2EqTCsE",
+    "fallbackUrl": "https://www.lazada.co.th"
+  },
+  {
+    "id": "linkCodashop",
+    "title": "Codashop เติมเกมฮิต ROV / Free Fire",
+    "description": "เติมเกมออนไลน์ทางการ รวดเร็ว ปลอดภัย ผ่าน Accesstrade",
+    "category": "gaming",
+    "badge": "⚡ เติมไว Accesstrade",
+    "url": "https://atth.me/00d1oq002anw",
+    "fallbackUrl": "https://www.codashop.com/th-th/"
+  },
+  {
+    "id": "linkSeagmGame",
+    "title": "SEAGM บัตรเกมสากล & Steam Wallet",
+    "description": "ศูนย์รวมบัตรเติมเกมต่างประเทศและรหัสเกมราคาส่ง",
+    "category": "gaming",
+    "badge": "💳 บัตรเกม",
+    "url": "https://www.seagm.com/",
+    "fallbackUrl": "https://www.seagm.com"
+  },
+  {
+    "id": "linkShopeeGame",
+    "title": "ดีลโค้ดเกมลดราคา (Shopee)",
+    "description": "รวมโค้ดเติมเงินเกมและเวาเชอร์เกมบน Shopee",
+    "category": "gaming",
+    "badge": "🎟️ โค้ดเกม",
+    "url": "   ",
+    "fallbackUrl": "  "
+  },
+  {
+    "id": "linkNetflixShopee",
+    "title": "โค้ด Netflix / Monomax (Shopee)",
+    "description": "บัตรเติมเงินและโค้ดแพ็กเกจสตรีมมิ่งความบันเทิง",
+    "category": "streaming",
+    "badge": "🎬 สตรีมมิ่ง",
+    "url": "   ",
+    "fallbackUrl": "   "
+  },
+  {
+    "id": "linkSeagmGift",
+    "title": "บัตรของขวัญดิจิทัล (SEAGM)",
+    "description": "Digital Gift Cards สำหรับ Apple, Google Play และสตรีมมิ่ง",
+    "category": "streaming",
+    "badge": "🎁 บัตรของขวัญ",
+    "url": "https://www.seagm.com/",
+    "fallbackUrl": "https://www.seagm.com"
+  },
+  {
+    "id": "linkLazadaStream",
+    "title": "โค้ดส่วนลดสตรีมมิ่ง (Lazada)",
+    "description": "ดีลคูปองโปรโมชันแอปสตรีมมิ่งบน Lazada",
+    "category": "streaming",
+    "badge": "🏷️ โค้ดลด",
+    "url": "   ",
+    "fallbackUrl": "  "
+  },
+  {
+    "id": "linkGeforceNow",
+    "title": "GeForce NOW Thailand (Bro.game)",
+    "description": "บริการ Cloud Gaming เล่นเกมสเปกสูงลื่นไหลผ่านคลาวด์",
+    "category": "cloud_gaming",
+    "badge": "🚀 Cloud Game",
+    "url": "https://www.bro.game/",
+    "fallbackUrl": "https://www.bro.game"
+  },
+  {
+    "id": "linkCloudShopee",
+    "title": "แพ็กเกจโค้ดเช่า Cloud (Shopee)",
+    "description": "แพ็กเกจชั่วโมงเช่าระบบคลาวด์บน Shopee",
+    "category": "cloud_gaming",
+    "badge": "📦 แพ็กเกจ",
+    "url": "  ",
+    "fallbackUrl": "   "
+  }
+]
