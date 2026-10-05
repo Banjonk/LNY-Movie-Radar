@@ -369,64 +369,35 @@ function executeSearch() {
 }
 
 // -------------------------------------------------------------
-// 3. เรดาร์สแกนสดจำลอง (สร้างห้องฉายตรงสู่ YouTube, Bilibili, Netflix, Play)
+// 3. เรดาร์สแกนสด Real-time ผ่าน Cloudflare Worker
 // -------------------------------------------------------------
-function triggerLiveRadar(rawQuery) {
-  const encodedQuery = encodeURIComponent(rawQuery);
-  const targetYouTubeQuery = rawQuery.includes("สารคดี") 
-    ? encodeURIComponent(rawQuery + " พากย์ไทย เต็มเรื่อง HD") 
-    : encodeURIComponent(rawQuery + " เต็มเรื่อง พากย์ไทย");
+async function triggerLiveRadar(rawQuery) {
+  const container = document.getElementById('movieList');
+  if (!container) return;
 
-  const simulatedCards = [
-    {
-      "id": `yt-hub-${Date.now()}`,
-      "title": `${rawQuery} (ห้องฉาย YouTube คัดกรองพากย์ไทย)`,
-      "duration": "คลังรวม",
-      "starting_price": "ดูฟรี 0 บ.",
-      "poster": "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=600&q=80",
-      "categories": ["ดูฟรี", "YouTube"],
-      "specs": { "resolution": "1080p Full HD", "audio": "🎙️ พากย์ไทยแท้" },
-      "synopsis": "สถานีรวมภาพยนตร์ สารคดี และคลิปเต็มเรื่อง คัดกรองเวอร์ชันพากย์ไทย คมชัดสูง ดูฟรี",
-      "pricing_tiers": [{ "label": "▶ เข้าสู่ห้องฉาย YouTube", "price": "ฟรี 0 บ.", "class": "btn-youtube", "url": `https://www.youtube.com/results?search_query=${targetYouTubeQuery}` }]
-    },
-    {
-      "id": `bili-${Date.now()}`,
-      "title": `${rawQuery} (ห้องฉายเอเชีย & อนิเมะ Bilibili)`,
-      "duration": "ดูฟรี/VIP",
-      "starting_price": "ดูฟรี 0 บ.",
-      "poster": "https://images.unsplash.com/photo-1578632767115-351597cf2477?w=600&q=80",
-      "categories": ["ดูฟรี", "Bilibili"],
-      "specs": { "resolution": "Full HD / 720p", "audio": "พากย์ไทย / ซับไทย" },
-      "synopsis": "คลังภาพยนตร์เอเชีย การ์ตูนอนิเมะลิขสิทธิ์แท้ และซีรีส์กำลังภายในบน Bilibili",
-      "pricing_tiers": [{ "label": "▶ เข้าสู่ห้องฉาย Bilibili", "price": "ฟรี 0 บ.", "class": "btn-bilibili", "url": `https://www.bilibili.tv/th/search-result?q=${encodedQuery}` }]
-    },
-    {
-      "id": `netflix-${Date.now()}`,
-      "title": `${rawQuery} (สตรีมมิ่ง Netflix VIP)`,
-      "duration": "สมาชิก VIP",
-      "starting_price": "รายเดือน",
-      "poster": "https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?w=600&q=80",
-      "categories": ["สตรีมมิ่ง", "Netflix"],
-      "specs": { "resolution": "4K Ultra HD", "audio": "พากย์ไทยทางการ" },
-      "synopsis": "เช็กสถานะการออกฉายและรับชมสตรีมมิ่งคุณภาพสูงสุดระดับ 4K ผ่านคลัง Netflix",
-      "pricing_tiers": [{ "label": "▶ เปิดห้องฉาย Netflix", "price": "สมาชิก VIP", "class": "btn-netflix", "url": `https://www.netflix.com/search?q=${encodedQuery}` }]
-    },
-    {
-      "id": `gplay-${Date.now()}`,
-      "title": `${rawQuery} (Google Play ภาพยนตร์)`,
-      "duration": "เช่า 35 บ.",
-      "starting_price": "เช่า/ซื้อขาด",
-      "poster": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=600&q=80",
-      "categories": ["เช่าดู", "ซื้อขาด", "Google TV"],
-      "specs": { "resolution": "4K UHD / 1080p", "audio": "พากย์ไทย 5.1" },
-      "synopsis": "ระบบเช่าดู 48 ชม. หรือซื้อขาดเป็นเจ้าของไฟล์ลิขสิทธิ์แท้ผ่าน Google Play",
-      "pricing_tiers": [{ "label": "🛒 เช็กราคาเช่า Google Play", "price": "เช่าเริ่มต้น 35 บ.", "class": "btn-google", "url": `https://play.google.com/store/search?q=${encodedQuery}&c=movies` }]
+  container.innerHTML = `
+    <div style="grid-column: 1 / -1; text-align: center; padding: 40px;">
+      <p style="color: #38bdf8; font-weight: bold; font-size: 1.1rem;">📡 เรดาร์กำลังออกไปเคาะพิกัดสดจาก YouTube...</p>
+      <p style="color: #94a3b8; font-size: 0.85rem; margin-top: 4px;">กวาดคลิปพากย์ไทยและคลิปเต็มเรื่อง Real-time</p>
+    </div>
+  `;
+
+  try {
+    const workerUrl = `https://lny-movie-radar.naca-doy2.workers.dev?q=${encodeURIComponent(rawQuery)}`;
+    const response = await fetch(workerUrl);
+    if (!response.ok) throw new Error('เซิร์ฟเวอร์เรดาร์ไม่ตอบสนอง');
+    const liveResults = await response.json();
+
+    if (liveResults && liveResults.length > 0) {
+      renderMovies(liveResults);
+    } else {
+      container.innerHTML = `<div class="empty-state" style="grid-column: 1 / -1; text-align: center; padding: 40px; color: #94a3b8;">ไม่พบคลิปที่ตรงกับคำค้นหา [${escapeHtml(rawQuery)}]</div>`;
     }
-  ];
-
-  renderMovies(simulatedCards);
+  } catch (err) {
+    console.error(err);
+    container.innerHTML = `<div style="grid-column: 1 / -1; text-align: center; color: #f87171; padding: 40px;">ระบบสแกนขัดข้อง: ${err.message}</div>`;
+  }
 }
-
 // ควบคุมถาดสไลด์สนับสนุน
 window.openSupportTray = function() {
   const overlay = document.getElementById('trayOverlay');
