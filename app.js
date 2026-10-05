@@ -451,32 +451,37 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ตัวจัดการคลิกหมวดหมู่ชิป
+ // ตัวจัดการคลิกหมวดหมู่ชิป
   const categoryChips = document.querySelectorAll('.chip');
   categoryChips.forEach(chip => {
     chip.addEventListener('click', (e) => {
       categoryChips.forEach(c => c.classList.remove('active'));
       const target = e.currentTarget || e.target;
       target.classList.add('active');
+      
+      const catAttr = (target.getAttribute('data-category') || '').toLowerCase();
+      const buttonText = (target.textContent || '').trim().toLowerCase();
+      const combinedText = catAttr + ' ' + buttonText;
+
       activeCategory = target.getAttribute('data-category') || '';
 
-      if (activeCategory === 'หนังชนโรง') {
+      if (combinedText.includes('ชนโรง') || combinedText.includes('cinema')) {
         renderCinemaHub();
-      } else if (activeCategory === 'all') {
+      } else if (combinedText.includes('ทั้งหมด') || catAttr === 'all') {
         if (searchInput) searchInput.value = '';
         renderMovies(allMovies); 
       } else {
         let targetSearch = "";
 
-        // ตรวจสอบคำแบบครอบคลุม ไม่ว่าใน HTML จะตั้งชื่ออะไรมา
-        if (activeCategory.includes('ดูฟรี')) {
+        if (combinedText.includes('ดูฟรี') || combinedText.includes('free')) {
           targetSearch = "หนังเต็มเรื่อง พากย์ไทย";
-        } else if (activeCategory.includes('สารคดี')) {
+        } else if (combinedText.includes('สารคดี') || combinedText.includes('สำรวจโลก') || combinedText.includes('doc')) {
           targetSearch = "สารคดีสำรวจโลก";
-        } else if (activeCategory.includes('ไทย')) {
+        } else if (combinedText.includes('ไทย') || combinedText.includes('80') || combinedText.includes('90') || combinedText.includes('thai')) {
           targetSearch = "หนังไทย ยุค 90 เต็มเรื่อง";
-        } else if (activeCategory.includes('สงคราม') || activeCategory.includes('บู๊')) {
+        } else if (combinedText.includes('สงคราม') || combinedText.includes('บู๊') || combinedText.includes('action') || combinedText.includes('war')) {
           targetSearch = "หนังสงคราม บู๊ เต็มเรื่อง พากย์ไทย";
-        } else if (activeCategory.includes('อนิเมะ') || activeCategory.includes('การ์ตูน')) {
+        } else if (combinedText.includes('อนิเมะ') || combinedText.includes('การ์ตูน') || combinedText.includes('anime')) {
           targetSearch = "อนิเมะ พากย์ไทย เต็มเรื่อง";
         }
 
