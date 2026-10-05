@@ -6,6 +6,18 @@ let activeCategory = 'all';
 // =========================================================================
 let affiliateList = [];
 
+function setupDropdownLinks() {
+  if (!affiliateList || affiliateList.length === 0) return;
+
+  affiliateList.forEach(item => {
+    const el = document.getElementById(item.id);
+    if (el) {
+      el.href = item.url || item.fallbackUrl || '#';
+      if (item.title) el.title = item.title;
+    }
+  });
+}
+
 async function loadAffiliates() {
   try {
     const res = await fetch('affiliates.json');
@@ -38,7 +50,7 @@ async function loadMovieData() {
 }
 
 // -------------------------------------------------------------
-// 1. หน้า "🔥 หนังใหม่ชนโรง" (ดึงตรงจาก TMDB API + สำรอง 16 เรื่อง)
+// 1. หน้า "🔥 หนังใหม่ชนโรง" (ดึงตรงจาก TMDB API + สำรอง 6 เรื่อง)
 // -------------------------------------------------------------
 const FALLBACK_CINEMA_LIST = [
   {
@@ -66,7 +78,7 @@ const FALLBACK_CINEMA_LIST = [
   {
     "id": "cnm-3",
     "title": "Gladiator II",
-    "badge": "⚔️️ บู๊ฟอร์มยักษ์",
+    "badge": "⚔️ บู๊ฟอร์มยักษ์",
     "price": "ตั๋วเริ่ม 130 บ.",
     "poster": "https://image.tmdb.org/t/p/w500/2cxhvwyEwRlysAmRH4iodkvo0z5.jpg",
     "synopsis": "สงครามสังเวียนเลือดโคลอสเซียมภาคต่อระดับตำนาน ความมันส์สะเทือนบัลลังก์โรม",
@@ -351,7 +363,8 @@ function renderMovies(list) {
 }
 
 function executeSearch() {
-  const query = document.getElementById('searchInput').value.trim();
+  const searchInput = document.getElementById('searchInput');
+  const query = searchInput ? searchInput.value.trim() : '';
   if (!query) {
     renderMovies(allMovies);
     return;
@@ -429,59 +442,25 @@ function escapeHtml(str) {
   return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#039;');
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-  loadAffiliates();
-  loadMovieData();
-
-  const searchInput = document.getElementById('searchInput');
-  const searchBtn = document.getElementById('searchBtn');
-
-  if (searchBtn) searchBtn.addEventListener('click', executeSearch);
-  if (searchInput) {
-    searchInput.addEventListener('keydown', (e) => { 
-      if (e.key === 'Enter') executeSearch(); 
-    });
-  }
-
-  // ตัวจัดการคลิกหมวดหมู่ชิป
-  const categoryChips = document.querySelectorAll('.chip');
-  categoryChips.forEach(chip => {
-    chip.addEventListener('click', (e) => {
-      categoryChips.forEach(c => c.classList.remove('active'));
-      const target = e.currentTarget || e.target;
-      target.classList.add('active');
-
-      const catAttr = (target.getAttribute('data-category') || '').trim();
-
-      if (catAttr === 'หนังชนโรง') {
-        renderCinemaHub();
-      } else if (catAttr === 'all') {
-        if (searchInput) searchInput.value = '';
-        renderMovies(allMovies); 
-      } else {
-        let targetSearch = "";
-
-        if (catAttr === 'ดูฟรี') {
-          targetSearch = "หนังเต็มเรื่อง พากย์ไทย";
-        } else if (catAttr === 'สารคดี') {
-          targetSearch = "สารคดีสำรวจโลก";
-        } else if (catAttr === 'หนังไทย') {
-          targetSearch = "หนังไทย 90s เต็มเรื่อง";
-        } else if (catAttr === 'หนังสงคราม') {
-          targetSearch = "หนังสงคราม บู๊ เต็มเรื่อง พากย์ไทย";
-        } else if (catAttr === 'อนิเมะ') {
-          targetSearch = "อนิเมะ พากย์ไทย เต็มเรื่อง";
-        }
-
-        if (targetSearch) {
-          if (searchInput) searchInput.value = targetSearch;
-          // สั่งเรดาร์ให้ยิงสดออกไปกวาดทันที 100%
-          triggerLiveRadar(targetSearch);
-        }
-      }
-    });
+function toggleDropdown(menuId, event) {
+  if (event) event.stopPropagation();
+  const targetMenu = document.getElementById(menuId);
+  const allMenus = document.querySelectorAll('.dropdown-menu');
+  
+  allMenus.forEach(menu => {
+    if (menu !== targetMenu) menu.classList.remove('show');
   });
-}); // ปิดปีกกา DOMContentLoaded อย่างสมบูรณ์
+
+  if (targetMenu) {
+    targetMenu.classList.toggle('show');
+  }
+}
+
+window.addEventListener('click', () => {
+  document.querySelectorAll('.dropdown-menu').forEach(menu => {
+    menu.classList.remove('show');
+  });
+});
 
 // ==========================================
 // ระบบลิ้นชักคลังสำรอง (archives.json)
@@ -567,11 +546,6 @@ function setupArchiveSearch() {
     searchInput.addEventListener('input', renderFilteredArchives);
   }
 }
-
-window.addEventListener('DOMContentLoaded', () => {
-  loadArchives();
-  setupArchiveSearch();
-});
 
 function toggleDrawerWidth() {
   const drawer = document.getElementById('archiveDrawer');
@@ -746,38 +720,6 @@ function copyForMovieSlot(title, poster, duration, source, url) {
   });
 }
 
-function toggleDropdown(menuId, event) {
-  if (event) event.stopPropagation();
-  const targetMenu = document.getElementById(menuId);
-  const allMenus = document.querySelectorAll('.dropdown-menu');
-  
-  allMenus.forEach(menu => {
-    if (menu !== targetMenu) menu.classList.remove('show');
-  });
-
-  if (targetMenu) {
-    targetMenu.classList.toggle('show');
-  }
-}
-
-window.addEventListener('click', () => {
-  document.querySelectorAll('.dropdown-menu').forEach(menu => {
-    menu.classList.remove('show');
-  });
-});
-
-function setupDropdownLinks() {
-  if (!affiliateList || affiliateList.length === 0) return;
-
-  affiliateList.forEach(item => {
-    const el = document.getElementById(item.id);
-    if (el) {
-      el.href = item.url || item.fallbackUrl || '#';
-      if (item.title) el.title = item.title;
-    }
-  });
-}
-
 // =========================================================================
 // 🤖 สร้างสารบัญ Semantic SEO ท้ายเว็บอัตโนมัติจาก archives.json
 // =========================================================================
@@ -839,3 +781,62 @@ function buildSemanticSeoDirectory(items) {
     </div>
   `;
 }
+
+// =========================================================================
+// จุดเริ่มต้นการทำงานเมื่อโหลดหน้าเว็บเสร็จ
+// =========================================================================
+document.addEventListener('DOMContentLoaded', () => {
+  loadAffiliates();
+  loadMovieData();
+  loadArchives();
+  setupArchiveSearch();
+
+  const searchInput = document.getElementById('searchInput');
+  const searchBtn = document.getElementById('searchBtn');
+
+  if (searchBtn) searchBtn.addEventListener('click', executeSearch);
+  if (searchInput) {
+    searchInput.addEventListener('keydown', (e) => { 
+      if (e.key === 'Enter') executeSearch(); 
+    });
+  }
+
+  // ตัวจัดการคลิกหมวดหมู่ชิป
+  const categoryChips = document.querySelectorAll('.chip');
+  categoryChips.forEach(chip => {
+    chip.addEventListener('click', (e) => {
+      categoryChips.forEach(c => c.classList.remove('active'));
+      const target = e.currentTarget || e.target;
+      target.classList.add('active');
+
+      const catAttr = (target.getAttribute('data-category') || '').trim();
+
+      if (catAttr === 'หนังชนโรง') {
+        renderCinemaHub();
+      } else if (catAttr === 'all') {
+        if (searchInput) searchInput.value = '';
+        renderMovies(allMovies); 
+      } else {
+        let targetSearch = "";
+
+        if (catAttr === 'ดูฟรี') {
+          targetSearch = "หนังเต็มเรื่อง พากย์ไทย";
+        } else if (catAttr === 'สารคดี') {
+          targetSearch = "สารคดีสำรวจโลก";
+        } else if (catAttr === 'หนังไทย') {
+          targetSearch = "หนังไทย 90s เต็มเรื่อง";
+        } else if (catAttr === 'หนังสงคราม') {
+          targetSearch = "หนังสงคราม บู๊ เต็มเรื่อง พากย์ไทย";
+        } else if (catAttr === 'อนิเมะ') {
+          targetSearch = "อนิเมะ พากย์ไทย เต็มเรื่อง";
+        }
+
+        if (targetSearch) {
+          if (searchInput) searchInput.value = targetSearch;
+          // สั่งเรดาร์ให้ยิงสดออกไปกวาดทันที
+          triggerLiveRadar(targetSearch);
+        }
+      }
+    });
+  });
+});
