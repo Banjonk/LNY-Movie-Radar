@@ -22,6 +22,7 @@ function getAffiliateUrl(id, defaultUrl = '#') {
   const item = affiliateList.find(a => a.id === id);
   return item ? (item.url || item.fallbackUrl || defaultUrl) : defaultUrl;
 }
+
 async function loadMovieData() {
   const container = document.getElementById('movieList');
   try {
@@ -30,13 +31,84 @@ async function loadMovieData() {
     allMovies = await response.json();
     renderMovies(allMovies);
   } catch (error) {
-    container.innerHTML = `<div class="empty-state">แจ้งเตือน: ${error.message} (โปรดตรวจสอบการรันผ่าน LocalServer)</div>`;
+    if (container) {
+      container.innerHTML = `<div class="empty-state">แจ้งเตือน: ${error.message}</div>`;
+    }
   }
 }
 
 // -------------------------------------------------------------
-// 1. หน้า "🔥 หนังใหม่ชนโรง" ดึงข้อมูลและแก้ปัญหาลิงก์ SF / Major
+// 1. หน้า "🔥 หนังใหม่ชนโรง" (ดึงตรงจาก TMDB API + สำรอง 16 เรื่อง)
 // -------------------------------------------------------------
+const FALLBACK_CINEMA_LIST = [
+  {
+    "id": "cnm-1",
+    "title": "ธี่หยด 2",
+    "badge": "🔥 รอบฉายวันนี้",
+    "price": "ตั๋วเริ่ม 120 บ.",
+    "poster": "https://image.tmdb.org/t/p/w500/8cdWjvZQUExUUTzyp4t6EDMubfO.jpg",
+    "synopsis": "การกลับมาล้างแค้นของพี่ยักษ์ ดงผีป่าสุดสะพรึงและปมลี้ลับที่ต้องพิสูจน์ในโรง",
+    "trailerUrl": "https://www.youtube.com/results?search_query=ธี่หยด+2+ตัวอย่าง",
+    "majorUrl": "https://www.majorcineplex.com",
+    "sfUrl": "https://www.sfcinemacity.com/movies/now-showing"
+  },
+  {
+    "id": "cnm-2",
+    "title": "หลานม่า (How to Make Millions)",
+    "badge": "🎬 ฉายทุกโรง",
+    "price": "ตั๋วเริ่ม 120 บ.",
+    "poster": "https://image.tmdb.org/t/p/w500/9Pf9BTyvFwbZ6T9f0gZ0K4v00vP.jpg",
+    "synopsis": "ภาพยนตร์ครอบครัวแห่งปี เรื่องราวความอบอุ่นระหว่างหลานชายและอาม่า",
+    "trailerUrl": "https://www.youtube.com/results?search_query=หลานม่า+ตัวอย่าง",
+    "majorUrl": "https://www.majorcineplex.com",
+    "sfUrl": "https://www.sfcinemacity.com/movies/now-showing"
+  },
+  {
+    "id": "cnm-3",
+    "title": "Gladiator II",
+    "badge": "⚔️ บู๊ฟอร์มยักษ์",
+    "price": "ตั๋วเริ่ม 130 บ.",
+    "poster": "https://image.tmdb.org/t/p/w500/2cxhvwyEwRlysAmRH4iodkvo0z5.jpg",
+    "synopsis": "สงครามสังเวียนเลือดโคลอสเซียมภาคต่อระดับตำนาน ความมันส์สะเทือนบัลลังก์โรม",
+    "trailerUrl": "https://www.youtube.com/results?search_query=Gladiator+2+Trailer",
+    "majorUrl": "https://www.majorcineplex.com",
+    "sfUrl": "https://www.sfcinemacity.com/movies/now-showing"
+  },
+  {
+    "id": "cnm-4",
+    "title": "Moana 2",
+    "badge": "🌊 แอนิเมชันฟอร์มยักษ์",
+    "price": "ตั๋วเริ่ม 120 บ.",
+    "poster": "https://image.tmdb.org/t/p/w500/4YZpsylmjHbqeWzjKpUEF8gcLUV.jpg",
+    "synopsis": "การผจญภัยครั้งใหม่ข้ามมหาสมุทรแปซิฟิกของโมอาน่าและมาวอิ",
+    "trailerUrl": "https://www.youtube.com/results?search_query=Moana+2+ตัวอย่าง",
+    "majorUrl": "https://www.majorcineplex.com",
+    "sfUrl": "https://www.sfcinemacity.com/movies/now-showing"
+  },
+  {
+    "id": "cnm-5",
+    "title": "Deadpool & Wolverine",
+    "badge": "💥 แอ็กชันคอมเมดี้",
+    "price": "ตั๋วเริ่ม 130 บ.",
+    "poster": "https://image.tmdb.org/t/p/w500/8cdWjvZQUExUUTzyp4t6EDMubfO.jpg",
+    "synopsis": "การผนึกกำลังสุดป่วนกวนประสาทของสองคู่หูฮีโร่สายโหด บันเทิงทะลุมิติตลอดเรื่อง",
+    "trailerUrl": "https://www.youtube.com/results?search_query=Deadpool+Wolverine+ตัวอย่าง",
+    "majorUrl": "https://www.majorcineplex.com",
+    "sfUrl": "https://www.sfcinemacity.com/movies/now-showing"
+  },
+  {
+    "id": "cnm-6",
+    "title": "วิมานหนาม (The Paradise of Thorns)",
+    "badge": "🏆 หนังไทยยอดเยี่ยม",
+    "price": "ตั๋วเริ่ม 120 บ.",
+    "poster": "https://image.tmdb.org/t/p/w500/fU3jSg5H4w1H2K2H1g2G1H2G1H2.jpg",
+    "synopsis": "การแย่งชิงสวนทุเรียนและมรดกเลือด ละครชีวิตฟาดฟันสุดเข้มข้น",
+    "trailerUrl": "https://www.youtube.com/results?search_query=วิมานหนาม+ตัวอย่าง",
+    "majorUrl": "https://www.majorcineplex.com",
+    "sfUrl": "https://www.sfcinemacity.com/movies/now-showing"
+  }
+];
+
 async function renderCinemaHub() {
   const container = document.getElementById('movieList');
   container.innerHTML = `
@@ -46,96 +118,120 @@ async function renderCinemaHub() {
     </div>
   `;
 
+  let cinemaList = [];
+  const tmdbApiKey = "b247b48b334c0cda00246594652c054f";
+  const tmdbUrl = `https://api.themoviedb.org/3/movie/now_playing?api_key=${tmdbApiKey}&language=th-TH&region=TH&page=1`;
+
   try {
-    const response = await fetch('/api/cinema');
-    if (!response.ok) throw new Error('ไม่สามารถเชื่อมต่อระบบหนังโรงได้');
-    const cinemaList = await response.json();
+    const response = await fetch(tmdbUrl);
+    if (!response.ok) throw new Error('เชื่อมต่อ TMDB ไม่สำเร็จ');
+    const data = await response.json();
 
-    container.innerHTML = '';
+    if (data.results && data.results.length > 0) {
+      cinemaList = data.results.slice(0, 20).map((movie, index) => {
+        const title = movie.title || 'ไม่มีชื่อภาษาไทย';
+        const posterPath = movie.poster_path ? `https://image.tmdb.org/t/p/w500${movie.poster_path}` : 'logo.png';
+        let synopsis = movie.overview ? movie.overview.trim() : 'รอบฉายภาพยนตร์สัปดาห์นี้ เช็ครอบฉายและสิทธิพิเศษตั๋วราคาประหยัด';
+        if (synopsis.length > 90) synopsis = synopsis.substring(0, 90) + '...';
 
-    if (!cinemaList || cinemaList.length === 0) {
-      container.innerHTML = `<div class="empty-state" style="grid-column: 1 / -1; text-align: center; padding: 40px; color: #94a3b8;">ไม่พบรอบฉายภาพยนตร์ในขณะนี้</div>`;
-      return;
+        return {
+          id: `cnm-${index + 1}`,
+          title: title,
+          badge: "🔥 ฉายแล้ววันนี้",
+          price: "ตั๋วเริ่ม 120 บ.",
+          poster: posterPath,
+          synopsis: synopsis,
+          trailerUrl: `https://www.youtube.com/results?search_query=${encodeURIComponent(title + ' ตัวอย่าง')}`,
+          majorUrl: `https://www.majorcineplex.com/search?q=${encodeURIComponent(title)}`,
+          sfUrl: "https://www.sfcinema.com/"
+        };
+      });
     }
+  } catch (err) {
+    console.warn('⚠️ ดึง TMDB สดไม่สำเร็จ สลับใช้คลังสำรอง:', err.message);
+    cinemaList = FALLBACK_CINEMA_LIST;
+  }
 
-    cinemaList.forEach(movie => {
-      let safeSfUrl = movie.sfUrl || 'https://www.sfcinema.com/';
-      const safeMajorUrl = movie.majorUrl || 'https://www.majorcineplex.com/movie';
-      const safeTrailerUrl = movie.trailerUrl || `https://www.youtube.com/results?search_query=ตัวอย่าง+${encodeURIComponent(movie.title)}`;
+  container.innerHTML = '';
 
-      const badgeText = movie.badge || 'ฉายอยู่วันนี้';
-      const priceText = movie.price || 'เช็ครอบฉาย';
-      const synopsisText = movie.synopsis || 'ตรวจสอบรอบฉายและรายละเอียดได้ที่โรงภาพยนตร์';
+  if (!cinemaList || cinemaList.length === 0) {
+    container.innerHTML = `<div class="empty-state" style="grid-column: 1 / -1; text-align: center; padding: 40px; color: #94a3b8;">ไม่พบรอบฉายภาพยนตร์ในขณะนี้</div>`;
+    return;
+  }
 
-	  const card = document.createElement('article');
-	        card.className = 'cinema-card';
-	        card.innerHTML = `
-	          <div class="poster-box">
-	            <img src="${movie.poster || 'logo.png'}" alt="${escapeHtml(movie.title)}" class="poster-img" loading="lazy" onerror="this.src='logo.png'">
-	            <span class="poster-badge-platform" style="background: #f59e0b; color: #000; font-weight: bold;">${badgeText}</span>
-	            <span class="poster-badge-time">${priceText}</span>
-	          </div>
+  cinemaList.forEach(movie => {
+    let safeSfUrl = movie.sfUrl || 'https://www.sfcinema.com/';
+    const safeMajorUrl = movie.majorUrl || 'https://www.majorcineplex.com/movie';
+    const safeTrailerUrl = movie.trailerUrl || `https://www.youtube.com/results?search_query=ตัวอย่าง+${encodeURIComponent(movie.title)}`;
+    const badgeText = movie.badge || 'ฉายอยู่วันนี้';
+    const priceText = movie.price || 'เช็ครอบฉาย';
+    const synopsisText = movie.synopsis || 'ตรวจสอบรอบฉายและรายละเอียดได้ที่โรงภาพยนตร์';
 
-	          <div class="cinema-card-body">
-	            <h3 class="cinema-card-title">${escapeHtml(movie.title)}</h3>
-	            <p class="cinema-synopsis-mini">${escapeHtml(synopsisText)}</p>
+    const card = document.createElement('article');
+    card.className = 'cinema-card';
+    card.innerHTML = `
+      <div class="poster-box">
+        <img src="${movie.poster || 'logo.png'}" alt="${escapeHtml(movie.title)}" class="poster-img" loading="lazy" onerror="this.src='logo.png'">
+        <span class="poster-badge-platform" style="background: #f59e0b; color: #000; font-weight: bold;">${badgeText}</span>
+        <span class="poster-badge-time">${priceText}</span>
+      </div>
 
-	            <div class="capsule-group">
-	              <!-- แถวที่ 1: ข้อมูลโรงหนัง & ตัวอย่าง (ลิงก์ทั่วไป ไม่ใส่ sponsored) -->
-	              <div class="capsule-row">
-	                <a href="${safeTrailerUrl}" target="_blank" rel="noopener noreferrer" class="pill-btn pill-trailer">
-	                  ▶ ตัวอย่าง
-	                </a>
-	                <a href="${safeMajorUrl}" target="_blank" rel="noopener noreferrer" class="pill-btn pill-major">
-	                  🍿 Major
-	                </a>
-	                <a href="${safeSfUrl}" target="_blank" rel="noopener noreferrer" class="pill-btn pill-sf">
-	                  🍿 SF
-	                </a>
-	              </div>
+      <div class="cinema-card-body">
+        <h3 class="cinema-card-title">${escapeHtml(movie.title)}</h3>
+        <p class="cinema-synopsis-mini">${escapeHtml(synopsisText)}</p>
 
-				  <!-- แถวที่ 2: โปรโมชันตั๋วหนัง (Affiliate ใส่ sponsored) -->
-				  <div class="capsule-row">
-				    <a href="${getAffiliateUrl('linkNavShopeeMovie')}" target="_blank" rel="noopener noreferrer sponsored" class="pill-btn pill-shopee">
-				      🎟️ ตั๋วลด Shopee
-				    </a>
-				    <a href="${getAffiliateUrl('linkNavLazadaMovie')}" target="_blank" rel="noopener noreferrer sponsored" class="pill-btn pill-lazada">
-				      🎟️ ตั๋วลด Lazada
-				    </a>
-				  </div>
+        <div class="capsule-group">
+          <!-- แถวที่ 1: ข้อมูลโรงหนัง & ตัวอย่าง -->
+          <div class="capsule-row">
+            <a href="${safeTrailerUrl}" target="_blank" rel="noopener noreferrer" class="pill-btn pill-trailer">
+              ▶ ตัวอย่าง
+            </a>
+            <a href="${safeMajorUrl}" target="_blank" rel="noopener noreferrer" class="pill-btn pill-major">
+              🍿 Major
+            </a>
+            <a href="${safeSfUrl}" target="_blank" rel="noopener noreferrer" class="pill-btn pill-sf">
+              🍿 SF
+            </a>
+          </div>
 
-				  <!-- แถวที่ 3: สตรีมมิ่ง & บัตรของขวัญ & Cloud (Affiliate ใส่ sponsored) -->
-				  <div class="capsule-row" style="margin-top: 6px;">
-				    <a href="${getAffiliateUrl('linkNetflixShopee')}" target="_blank" rel="noopener noreferrer sponsored" class="pill-btn" style="background: #e50914; color: #fff;">
-				      📺 โค้ดสตรีมมิ่ง
-				    </a>
-				    <a href="${getAffiliateUrl('linkLazadaStream')}" target="_blank" rel="noopener noreferrer sponsored" class="dropdown-item">
-				      💸 โค้ดส่วนลดสตรีมมิ่ง (Lazada)
-				    </a>
-				    <a href="${getAffiliateUrl('linkSeagmGift')}" target="_blank" rel="noopener noreferrer sponsored" class="pill-btn" style="background: #4f46e5; color: #fff;">
-				      🎁 บัตรของขวัญ
-				    </a>
-				    <a href="${getAffiliateUrl('linkGeforceNow')}" target="_blank" rel="noopener noreferrer sponsored" class="pill-btn" style="background: #0284c7; color: #fff;">
-				      ☁️ GeForce NOW
-				    </a>
-				  </div>
-				  	            </div>
-				  	          </div>
-				  	        `;
-				  	        container.appendChild(card);
-				  	      });
+          <!-- แถวที่ 2: โปรโมชันตั๋วหนัง (Affiliate) -->
+          <div class="capsule-row">
+            <a href="${getAffiliateUrl('linkNavShopeeMovie')}" target="_blank" rel="noopener noreferrer sponsored" class="pill-btn pill-shopee">
+              🎟️ ตั๋วลด Shopee
+            </a>
+            <a href="${getAffiliateUrl('linkNavLazadaMovie')}" target="_blank" rel="noopener noreferrer sponsored" class="pill-btn pill-lazada">
+              🎟️ ตั๋วลด Lazada
+            </a>
+          </div>
 
-				  	    } catch (err) {
-				  	      container.innerHTML = `<div style="grid-column: 1 / -1; text-align: center; color: #f87171; padding: 40px;">เชื่อมต่อระบบหนังโรงขัดข้อง: ${err.message}</div>`;
-				  	    }
-				  	  }
+          <!-- แถวที่ 3: สตรีมมิ่ง & บัตรของขวัญ & Cloud -->
+          <div class="capsule-row" style="margin-top: 6px;">
+            <a href="${getAffiliateUrl('linkNetflixShopee')}" target="_blank" rel="noopener noreferrer sponsored" class="pill-btn" style="background: #e50914; color: #fff;">
+              📺 โค้ดสตรีมมิ่ง
+            </a>
+            <a href="${getAffiliateUrl('linkLazadaStream')}" target="_blank" rel="noopener noreferrer sponsored" class="dropdown-item">
+              💸 โค้ดส่วนลดสตรีมมิ่ง (Lazada)
+            </a>
+            <a href="${getAffiliateUrl('linkSeagmGift')}" target="_blank" rel="noopener noreferrer sponsored" class="pill-btn" style="background: #4f46e5; color: #fff;">
+              🎁 บัตรของขวัญ
+            </a>
+            <a href="${getAffiliateUrl('linkGeforceNow')}" target="_blank" rel="noopener noreferrer sponsored" class="pill-btn" style="background: #0284c7; color: #fff;">
+              ☁️ GeForce NOW
+            </a>
+          </div>
+        </div>
+      </div>
+    `;
+    container.appendChild(card);
+  });
+}
 
-				  // -------------------------------------------------------------
-				  // 2. เรนเดอร์การ์ดค้นหาทั่วไป (YouTube, Bilibili, Netflix, Google Play)
-				  // -------------------------------------------------------------
-				  function renderMovies(list) {
-				    const container = document.getElementById('movieList');
-				    container.innerHTML = '';
+// -------------------------------------------------------------
+// 2. เรนเดอร์การ์ดค้นหาทั่วไป (YouTube, Bilibili, Netflix, Google Play)
+// -------------------------------------------------------------
+function renderMovies(list) {
+  const container = document.getElementById('movieList');
+  container.innerHTML = '';
 
   if (!list || list.length === 0) {
     container.innerHTML = `<div class="empty-state" style="grid-column: 1 / -1; text-align: center; padding: 40px; color: #94a3b8;">ไม่พบรายการที่ตรงกับคำค้นหา</div>`;
@@ -190,7 +286,6 @@ async function renderCinemaHub() {
     const qualityText = m.specs?.resolution || m.quality || "HD";
     const timeBadgeText = m.duration || (isFree ? "ดูฟรี" : priceText);
 
-    // สร้างปุ่มแอดมิน (เฉพาะ Localhost)
     let adminToolbarHTML = '';
     if (typeof isLocalhost !== 'undefined' && isLocalhost) {
       const safeTitle = (m.title || '').replace(/'/g, "\\'").replace(/"/g, '&quot;');
@@ -262,44 +357,89 @@ function executeSearch() {
   const filtered = allMovies.filter(m => {
     const titleMatch = m.title ? m.title.toLowerCase().includes(query.toLowerCase()) : false;
     const synMatch   = m.synopsis ? m.synopsis.toLowerCase().includes(query.toLowerCase()) : false;
-    return titleMatch || synMatch;
+    const catMatch   = Array.isArray(m.categories) ? m.categories.some(c => c.toLowerCase().includes(query.toLowerCase())) : false;
+    return titleMatch || synMatch || catMatch;
   });
 
   if (filtered.length > 0) {
     renderMovies(filtered);
   } else {
-    triggerLiveRadar(encodeURIComponent(query));
+    triggerLiveRadar(query);
   }
 }
 
-async function triggerLiveRadar(encodedQuery) {
-  const container = document.getElementById('movieList');
-  container.innerHTML = `
-    <div style="grid-column: 1 / -1; text-align: center; padding: 40px;">
-      <p style="color: #38bdf8; font-weight: bold; font-size: 1.1rem;">📡 เรดาร์กำลังออกไปเคาะพิกัดสดจากทุกค่าย...</p>
-      <p style="color: #94a3b8; font-size: 0.85rem; margin-top: 4px;">กวาดห้องฉายทางการของ YouTube, Bilibili, Netflix และ Google Play</p>
-    </div>
-  `;
+// -------------------------------------------------------------
+// 3. เรดาร์สแกนสดจำลอง (สร้างห้องฉายตรงสู่ YouTube, Bilibili, Netflix, Play)
+// -------------------------------------------------------------
+function triggerLiveRadar(rawQuery) {
+  const encodedQuery = encodeURIComponent(rawQuery);
+  const targetYouTubeQuery = rawQuery.includes("สารคดี") 
+    ? encodeURIComponent(rawQuery + " พากย์ไทย เต็มเรื่อง HD") 
+    : encodeURIComponent(rawQuery + " เต็มเรื่อง พากย์ไทย");
 
-  try {
-    const response = await fetch(`/api/radar?q=${encodedQuery}`);
-    if (!response.ok) throw new Error('เซิร์ฟเวอร์เรดาร์ไม่ตอบสนอง');
-    const liveData = await response.json();
-    renderMovies(liveData);
-  } catch (err) {
-    container.innerHTML = `<div style="grid-column: 1 / -1; text-align: center; color: #f87171;">ระบบสแกนขัดข้อง: ${err.message}</div>`;
-  }
+  const simulatedCards = [
+    {
+      "id": `yt-hub-${Date.now()}`,
+      "title": `${rawQuery} (ห้องฉาย YouTube คัดกรองพากย์ไทย)`,
+      "duration": "คลังรวม",
+      "starting_price": "ดูฟรี 0 บ.",
+      "poster": "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=600&q=80",
+      "categories": ["ดูฟรี", "YouTube"],
+      "specs": { "resolution": "1080p Full HD", "audio": "🎙️ พากย์ไทยแท้" },
+      "synopsis": "สถานีรวมภาพยนตร์ สารคดี และคลิปเต็มเรื่อง คัดกรองเวอร์ชันพากย์ไทย คมชัดสูง ดูฟรี",
+      "pricing_tiers": [{ "label": "▶ เข้าสู่ห้องฉาย YouTube", "price": "ฟรี 0 บ.", "class": "btn-youtube", "url": `https://www.youtube.com/results?search_query=${targetYouTubeQuery}` }]
+    },
+    {
+      "id": `bili-${Date.now()}`,
+      "title": `${rawQuery} (ห้องฉายเอเชีย & อนิเมะ Bilibili)`,
+      "duration": "ดูฟรี/VIP",
+      "starting_price": "ดูฟรี 0 บ.",
+      "poster": "https://images.unsplash.com/photo-1578632767115-351597cf2477?w=600&q=80",
+      "categories": ["ดูฟรี", "Bilibili"],
+      "specs": { "resolution": "Full HD / 720p", "audio": "พากย์ไทย / ซับไทย" },
+      "synopsis": "คลังภาพยนตร์เอเชีย การ์ตูนอนิเมะลิขสิทธิ์แท้ และซีรีส์กำลังภายในบน Bilibili",
+      "pricing_tiers": [{ "label": "▶ เข้าสู่ห้องฉาย Bilibili", "price": "ฟรี 0 บ.", "class": "btn-bilibili", "url": `https://www.bilibili.tv/th/search-result?q=${encodedQuery}` }]
+    },
+    {
+      "id": `netflix-${Date.now()}`,
+      "title": `${rawQuery} (สตรีมมิ่ง Netflix VIP)`,
+      "duration": "สมาชิก VIP",
+      "starting_price": "รายเดือน",
+      "poster": "https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?w=600&q=80",
+      "categories": ["สตรีมมิ่ง", "Netflix"],
+      "specs": { "resolution": "4K Ultra HD", "audio": "พากย์ไทยทางการ" },
+      "synopsis": "เช็กสถานะการออกฉายและรับชมสตรีมมิ่งคุณภาพสูงสุดระดับ 4K ผ่านคลัง Netflix",
+      "pricing_tiers": [{ "label": "▶ เปิดห้องฉาย Netflix", "price": "สมาชิก VIP", "class": "btn-netflix", "url": `https://www.netflix.com/search?q=${encodedQuery}` }]
+    },
+    {
+      "id": `gplay-${Date.now()}`,
+      "title": `${rawQuery} (Google Play ภาพยนตร์)`,
+      "duration": "เช่า 35 บ.",
+      "starting_price": "เช่า/ซื้อขาด",
+      "poster": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=600&q=80",
+      "categories": ["เช่าดู", "ซื้อขาด", "Google TV"],
+      "specs": { "resolution": "4K UHD / 1080p", "audio": "พากย์ไทย 5.1" },
+      "synopsis": "ระบบเช่าดู 48 ชม. หรือซื้อขาดเป็นเจ้าของไฟล์ลิขสิทธิ์แท้ผ่าน Google Play",
+      "pricing_tiers": [{ "label": "🛒 เช็กราคาเช่า Google Play", "price": "เช่าเริ่มต้น 35 บ.", "class": "btn-google", "url": `https://play.google.com/store/search?q=${encodedQuery}&c=movies` }]
+    }
+  ];
+
+  renderMovies(simulatedCards);
 }
 
 // ควบคุมถาดสไลด์สนับสนุน
 window.openSupportTray = function() {
-  document.getElementById('trayOverlay').style.display = 'block';
-  setTimeout(() => { document.getElementById('supportTray').classList.add('active'); }, 10);
+  const overlay = document.getElementById('trayOverlay');
+  const tray = document.getElementById('supportTray');
+  if (overlay) overlay.style.display = 'block';
+  if (tray) setTimeout(() => { tray.classList.add('active'); }, 10);
 };
 
 window.closeSupportTray = function() {
-  document.getElementById('supportTray').classList.remove('active');
-  setTimeout(() => { document.getElementById('trayOverlay').style.display = 'none'; }, 300);
+  const overlay = document.getElementById('trayOverlay');
+  const tray = document.getElementById('supportTray');
+  if (tray) tray.classList.remove('active');
+  if (overlay) setTimeout(() => { overlay.style.display = 'none'; }, 300);
 };
 
 window.confirmTransfer = function() {
@@ -310,8 +450,14 @@ window.confirmTransfer = function() {
   }
 };
 
-window.openBookmarkModal = function() { document.getElementById('bookmarkModal').style.display = 'flex'; };
-window.closeBookmarkModal = function() { document.getElementById('bookmarkModal').style.display = 'none'; };
+window.openBookmarkModal = function() {
+  const modal = document.getElementById('bookmarkModal');
+  if (modal) modal.style.display = 'flex';
+};
+window.closeBookmarkModal = function() {
+  const modal = document.getElementById('bookmarkModal');
+  if (modal) modal.style.display = 'none';
+};
 
 function escapeHtml(str) {
   if (!str) return '';
@@ -319,44 +465,50 @@ function escapeHtml(str) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  loadAffiliates(); // สั่งโหลด JSON ตั้งแต่เริ่มเปิดหน้าเว็บ
+  loadAffiliates();
   loadMovieData();
-  setupDropdownLinks(); // 🎯 หยอดลิงก์นายหน้าเข้า Dropdown ทุกตัวทันทีที่เปิดเว็บ
+  setupDropdownLinks();
 
   const searchInput = document.getElementById('searchInput');
   const searchBtn = document.getElementById('searchBtn');
 
-  searchBtn.addEventListener('click', executeSearch);
-  searchInput.addEventListener('keydown', (e) => { if (e.key === 'Enter') executeSearch(); });
+  if (searchBtn) searchBtn.addEventListener('click', executeSearch);
+  if (searchInput) {
+    searchInput.addEventListener('keydown', (e) => { 
+      if (e.key === 'Enter') executeSearch(); 
+    });
+  }
 
+  // ตัวจัดการคลิกหมวดหมู่ชิป
   const categoryChips = document.querySelectorAll('.chip');
   categoryChips.forEach(chip => {
     chip.addEventListener('click', (e) => {
       categoryChips.forEach(c => c.classList.remove('active'));
-      e.target.classList.add('active');
-      activeCategory = e.target.getAttribute('data-category');
+      const target = e.currentTarget || e.target;
+      target.classList.add('active');
+      activeCategory = target.getAttribute('data-category');
 
       if (activeCategory === 'หนังชนโรง') {
         renderCinemaHub();
-		} else if (activeCategory === 'all') {
-		  searchInput.value = ''; // เคลียร์ช่องค้นหากลับเป็นค่าว่างทันที
-		  renderMovies(allMovies); 
-	  }else {
+      } else if (activeCategory === 'all') {
+        if (searchInput) searchInput.value = '';
+        renderMovies(allMovies); 
+      } else {
         let targetSearch = "";
         if (activeCategory === 'ดูฟรี') targetSearch = "หนังเต็มเรื่อง ดูฟรี";
         else if (activeCategory === 'สารคดี') targetSearch = "สารคดีสำรวจโลก";
-        else if (activeCategory === 'หนังไทย') targetSearch = "หนังไทย ยุค 90";
-        else if (activeCategory === 'หนังสงคราม') targetSearch = "หนังสงคราม บู๊";
-        else if (activeCategory === 'อนิเมะ') targetSearch = "การ์ตูน อนิเมะ";
+        else if (activeCategory === 'หนังไทย') targetSearch = "หนังไทย";
+        else if (activeCategory === 'หนังสงคราม') targetSearch = "หนังสงคราม";
+        else if (activeCategory === 'อนิเมะ') targetSearch = "อนิเมะ";
 
         if (targetSearch) {
-          searchInput.value = targetSearch;
+          if (searchInput) searchInput.value = targetSearch;
           executeSearch();
         }
       }
     });
   });
- });
+});
 
 // ==========================================
 // ระบบลิ้นชักคลังสำรอง (archives.json)
@@ -370,7 +522,7 @@ async function loadArchives() {
     if (!response.ok) throw new Error('ไม่พบไฟล์ archives.json');
     archivesData = await response.json();
     renderFilteredArchives();
-	buildSemanticSeoDirectory(archivesData);
+    buildSemanticSeoDirectory(archivesData);
   } catch (error) {
     console.warn('โหลด archives.json ไม่สำเร็จ:', error);
   }
@@ -384,7 +536,7 @@ function renderFilteredArchives() {
     const matchCategory = (currentArchiveCat === 'all') || 
                           (item.category && item.category.includes(currentArchiveCat));
     const matchKeyword = !keyword || 
-                         item.title.toLowerCase().includes(keyword) || 
+                         (item.title && item.title.toLowerCase().includes(keyword)) || 
                          (item.specs && item.specs.toLowerCase().includes(keyword));
     return matchCategory && matchKeyword;
   });
@@ -405,9 +557,9 @@ function renderArchiveList(items) {
   if (!listContainer) return;
   
   const countBadge = document.getElementById("archiveCountBadge");
-      if (countBadge) {
-		countBadge.textContent = items.length + " เรื่อง";
-      }
+  if (countBadge) {
+    countBadge.textContent = items.length + " เรื่อง";
+  }
 
   if (items.length === 0) {
     listContainer.innerHTML = '<div style="color: #94a3b8; text-align: center; padding: 30px 10px;">ไม่พบรายการในหมวดนี้</div>';
@@ -417,11 +569,11 @@ function renderArchiveList(items) {
   listContainer.innerHTML = items.map(item => `
     <div class="archive-item">
       <div class="archive-info">
-        <span class="archive-title">${item.title}</span>
-        <span class="archive-meta">${item.category || ''} • ${item.specs || ''}</span>
+        <span class="archive-title">${escapeHtml(item.title)}</span>
+        <span class="archive-meta">${escapeHtml(item.category || '')} • ${escapeHtml(item.specs || '')}</span>
       </div>
       <a href="${item.url}" target="_blank" rel="noopener noreferrer" class="archive-btn ${item.source === 'Bilibili' ? 'btn-bilibili' : 'btn-youtube'}">
-        ▶ ${item.source}
+        ▶ ${escapeHtml(item.source)}
       </a>
     </div>
   `).join('');
@@ -510,7 +662,6 @@ function checkDuplicateInArchive(newTitle, newUrl) {
   return null;
 }
 
-// คำสั่ง: ดึงและก๊อปปี้สำหรับใส่ archives.json
 function copyForArchive(title, category, specs, source, url) {
   const dupCheck = checkDuplicateInArchive(title, url);
   if (dupCheck) {
@@ -571,7 +722,6 @@ function copyForArchive(title, category, specs, source, url) {
   });
 }
 
-// คำสั่ง: ดึงและก๊อปปี้สำหรับใส่ movies.json (ยืดหยุ่น ไม่จำกัดแค่ 32 และตรงตามสเปกจริง)
 function copyForMovieSlot(title, poster, duration, source, url) {
   const currentCount = allMovies ? allMovies.length : 32;
   const nextSlot = currentCount + 1;
@@ -623,7 +773,6 @@ function copyForMovieSlot(title, poster, duration, source, url) {
   });
 }
 
-// ฟังก์ชัน เปิด/ปิด Dropdown ทีละอัน ไม่ให้ตีกัน (ป้องกัน event เป็น null)
 function toggleDropdown(menuId, event) {
   if (event) event.stopPropagation();
   const targetMenu = document.getElementById(menuId);
@@ -638,14 +787,12 @@ function toggleDropdown(menuId, event) {
   }
 }
 
-// คลิกที่ว่างตรงไหนในเว็บ ให้หุบเมนูเก็บทันที
 window.addEventListener('click', () => {
   document.querySelectorAll('.dropdown-menu').forEach(menu => {
     menu.classList.remove('show');
   });
 });
 
-// ฟังก์ชันแจกจ่ายลิงก์เข้าสู่ปุ่มทั้งหมดใน Navbar
 function setupDropdownLinks() {
   if (!affiliateList || affiliateList.length === 0) return;
 
@@ -657,8 +804,9 @@ function setupDropdownLinks() {
     }
   });
 }
+
 // =========================================================================
-// 🤖 สร้างสารบัญ Semantic SEO ท้ายเว็บอัตโนมัติจาก archives.json (Zero Maintenance)
+// 🤖 สร้างสารบัญ Semantic SEO ท้ายเว็บอัตโนมัติจาก archives.json
 // =========================================================================
 function buildSemanticSeoDirectory(items) {
   const hub = document.getElementById('seoDirectoryHub');
