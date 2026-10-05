@@ -459,7 +459,7 @@ document.addEventListener('DOMContentLoaded', () => {
       target.classList.add('active');
       activeCategory = target.getAttribute('data-category');
 
-      if (activeCategory === 'หนังชนโรง') {
+    if (activeCategory === 'หนังชนโรง') {
         renderCinemaHub();
       } else if (activeCategory === 'all') {
         if (searchInput) searchInput.value = '';
