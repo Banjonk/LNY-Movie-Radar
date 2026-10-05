@@ -457,30 +457,37 @@ document.addEventListener('DOMContentLoaded', () => {
       categoryChips.forEach(c => c.classList.remove('active'));
       const target = e.currentTarget || e.target;
       target.classList.add('active');
-      activeCategory = target.getAttribute('data-category');
+      activeCategory = target.getAttribute('data-category') || '';
 
-    if (activeCategory === 'หนังชนโรง') {
+      if (activeCategory === 'หนังชนโรง') {
         renderCinemaHub();
       } else if (activeCategory === 'all') {
         if (searchInput) searchInput.value = '';
         renderMovies(allMovies); 
       } else {
         let targetSearch = "";
-        if (activeCategory === 'ดูฟรี') targetSearch = "หนังเต็มเรื่อง ดูฟรี";
-        else if (activeCategory === 'สารคดี') targetSearch = "สารคดีสำรวจโลก";
-        else if (activeCategory === 'หนังไทย') targetSearch = "หนังไทย";
-        else if (activeCategory === 'หนังสงคราม') targetSearch = "หนังสงคราม";
-        else if (activeCategory === 'อนิเมะ') targetSearch = "อนิเมะ";
+
+        // ตรวจสอบคำแบบครอบคลุม ไม่ว่าใน HTML จะตั้งชื่ออะไรมา
+        if (activeCategory.includes('ดูฟรี')) {
+          targetSearch = "หนังเต็มเรื่อง พากย์ไทย";
+        } else if (activeCategory.includes('สารคดี')) {
+          targetSearch = "สารคดีสำรวจโลก";
+        } else if (activeCategory.includes('ไทย')) {
+          targetSearch = "หนังไทย ยุค 90 เต็มเรื่อง";
+        } else if (activeCategory.includes('สงคราม') || activeCategory.includes('บู๊')) {
+          targetSearch = "หนังสงคราม บู๊ เต็มเรื่อง พากย์ไทย";
+        } else if (activeCategory.includes('อนิเมะ') || activeCategory.includes('การ์ตูน')) {
+          targetSearch = "อนิเมะ พากย์ไทย เต็มเรื่อง";
+        }
 
         if (targetSearch) {
           if (searchInput) searchInput.value = targetSearch;
-          executeSearch();
+          // สั่งเรดาร์ให้เริ่มออกไปเคาะพิกัดสดทันที
+          triggerLiveRadar(targetSearch);
         }
       }
     });
   });
-});
-
 // ==========================================
 // ระบบลิ้นชักคลังสำรอง (archives.json)
 // ==========================================
