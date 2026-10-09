@@ -1,0 +1,37 @@
+name: Radar Auto Curator (Every 3 Days)
+
+on:
+  schedule:
+    # รันอัตโนมัติทุกๆ 3 วัน เวลา 00:00 UTC
+    - cron: '0 0 */3 * *'
+  workflow_dispatch: # ปล่อยปุ่มกดรันเองด้วยมือไว้ทดสอบ
+
+permissions:
+  contents: write
+
+jobs:
+  curate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Run Curator Engine
+        run: node scripts/curator.js
+
+      - name: Commit & Push Changes
+        run: |
+          git config --global user.name "Radar-Curator-Bot"
+          git config --global user.email "bot@lnymovieradar.local"
+          git add radar-cache.json
+          if git diff --staged --quiet; then
+            echo "ไม่มีการเปลี่ยนแปลงในตู้เอกสาร"
+          else
+            git commit -m "🤖 [Automated] Refresh Radar Cache (Min 60 - Max 100) [skip ci]"
+            git push
+          fi
