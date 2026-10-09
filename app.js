@@ -466,17 +466,24 @@ document.addEventListener('DOMContentLoaded', () => {
         if (searchInput) searchInput.value = '';
         renderMovies(allMovies); 
       } else {
-        let targetSearch = "";
-        if (activeCategory === 'ดูฟรี') targetSearch = "หนังเต็มเรื่อง ดูฟรี";
-        else if (activeCategory === 'สารคดี') targetSearch = "สารคดีสำรวจโลก";
-        else if (activeCategory === 'หนังไทย') targetSearch = "หนังไทย";
-        else if (activeCategory === 'หนังสงคราม') targetSearch = "หนังสงคราม";
-        else if (activeCategory === 'อนิเมะ') targetSearch = "อนิเมะ";
+       // ในส่วนดักคลิกปุ่มหมวดหมู่ (Category Chips Listener)
+let targetSearch = "";
+if (activeCategory === 'ดูฟรี') {
+  targetSearch = "หนังเต็มเรื่อง ดูฟรี";
+} else if (activeCategory === 'สารคดี') {
+  targetSearch = "สารคดีสำรวจโลก";
+} else if (activeCategory === 'หนังไทย 80s-90s' || activeCategory === 'หนังไทย') {
+  targetSearch = "อมตะหนังไทยยุค 90";
+} else if (activeCategory === 'หนังสงคราม/บู๊' || activeCategory === 'หนังสงคราม') {
+  targetSearch = "หนังสงครามพากย์ไทย";
+} else if (activeCategory === 'การ์ตูน/อนิเมะ' || activeCategory === 'อนิเมะ') {
+  targetSearch = "หนังการ์ตูน";
+}
 
-        if (targetSearch) {
-          if (searchInput) searchInput.value = targetSearch;
-          executeSearch();
-        }
+if (targetSearch) {
+  if (searchInput) searchInput.value = targetSearch;
+  executeSearch();
+}
       }
     });
   });
