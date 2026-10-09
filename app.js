@@ -468,17 +468,11 @@ document.addEventListener('DOMContentLoaded', () => {
       } else {
        // ในส่วนดักคลิกปุ่มหมวดหมู่ (Category Chips Listener)
 let targetSearch = "";
-if (activeCategory === 'ดูฟรี') {
-  targetSearch = "หนังเต็มเรื่อง ดูฟรี";
-} else if (activeCategory === 'สารคดี') {
-  targetSearch = "สารคดีสำรวจโลก";
-} else if (activeCategory === 'หนังไทย 80s-90s' || activeCategory === 'หนังไทย') {
-  targetSearch = "อมตะหนังไทยยุค 90";
-} else if (activeCategory === 'หนังสงคราม/บู๊' || activeCategory === 'หนังสงคราม') {
-  targetSearch = "หนังสงครามพากย์ไทย";
-} else if (activeCategory === 'การ์ตูน/อนิเมะ' || activeCategory === 'อนิเมะ') {
-  targetSearch = "หนังการ์ตูน";
-}
+if (activeCategory === 'ดูฟรี') { targetSearch = "หนังเต็มเรื่อง ดูฟรี";}
+else if (activeCategory === 'สารคดี') {targetSearch = "สารคดีสำรวจโลก";}
+else if (activeCategory === 'หนังไทย') { targetSearch = "อมตะหนังไทยยุค 90";} 
+else if (activeCategory === 'หนังสงคราม') {targetSearch = "หนังสงครามพากย์ไทย";} 
+else if (activeCategory === 'อนิเมะ') {targetSearch = "หนังการ์ตูน";}
 
 if (targetSearch) {
   if (searchInput) searchInput.value = targetSearch;
