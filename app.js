@@ -472,11 +472,11 @@ if (activeCategory === 'ดูฟรี') {
   targetSearch = "หนังเต็มเรื่อง ดูฟรี";
 } else if (activeCategory === 'สารคดี') {
   targetSearch = "สารคดีสำรวจโลก";
-} else if (activeCategory === 'หนังไทย 80s-90s' || activeCategory === 'หนังไทย') {
+} else if (activeCategory === 'หนังไทย 80s-90s' || activeCategory === 'อมตะหนังไทยยุค90') {
   targetSearch = "อมตะหนังไทยยุค 90";
-} else if (activeCategory === 'หนังสงคราม/บู๊' || activeCategory === 'หนังสงคราม') {
+} else if (activeCategory === 'หนังสงคราม/บู๊' || activeCategory === 'หนังสงครามพากย์ไทย') {
   targetSearch = "หนังสงครามพากย์ไทย";
-} else if (activeCategory === 'การ์ตูน/อนิเมะ' || activeCategory === 'อนิเมะ') {
+} else if (activeCategory === 'การ์ตูน/อนิเมะ' || activeCategory === 'หนังการ์ตูน') {
   targetSearch = "หนังการ์ตูน";
 }
 
