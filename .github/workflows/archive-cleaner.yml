@@ -1,0 +1,40 @@
+name: Archive Link Cleaner & LINE Alert
+
+on:
+  schedule:
+    # สั่งรันอัตโนมัติทุกวันอาทิตย์ เวลาเที่ยงคืน (ตามเวลาไทย UTC+7 คือ 17:00 UTC)
+    - cron: '0 17 * * 0'
+  workflow_dispatch: # เปิดให้กดปุ่มสั่งรันมือเพื่อทดสอบได้ทันที
+
+permissions:
+  contents: write # ให้สิทธิ์บันทึกและ commit ไฟล์ archives.json กลับเข้าคลัง
+
+jobs:
+  clean:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Run Archive Cleaner & Alert LINE
+        env:
+          LINE_CHANNEL_ACCESS_TOKEN: ${{ secrets.LINE_CHANNEL_ACCESS_TOKEN }}
+          LINE_USER_ID: ${{ secrets.LINE_USER_ID }}
+        run: node scripts/check_links.js
+
+      - name: Commit & Push if archives.json changed
+        run: |
+          git config --global user.name "LNY Archive Bot"
+          git config --global user.email "bot@lnymovie.internal"
+          git add archives.json
+          if git diff --staged --quiet; then
+            echo "ไม่มีลิงก์ตาย คลัง archives.json ไม่มีการเปลี่ยนแปลง"
+          else
+            git commit -m "Auto-clean dead links from archives.json [skip ci]"
+            git push
+          fi
