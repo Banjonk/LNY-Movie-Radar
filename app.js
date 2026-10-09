@@ -399,6 +399,49 @@ async function triggerLiveRadar(rawQuery) {
   }
 }
 
+// =============================================================
+// ระบบดึงหนังจากตู้กลาง (ถ้าตู้มีปัญหา ตีกลับไปดึงสดผ่าน triggerLiveRadar)
+// =============================================================
+async function loadCategoryFromCabinet(categoryName) {
+  const container = document.getElementById('movieList');
+  if (!container) return;
+
+  const fallbackKeywords = {
+    'ดูฟรี': 'หนังเต็มเรื่อง ดูฟรี',
+    'สารคดี': 'สารคดีสำรวจโลก',
+    'หนังไทย': 'อมตะหนังไทยยุค 90',
+    'หนังสงคราม': 'หนังสงครามพากย์ไทย',
+    'อนิเมะ': 'หนังการ์ตูน'
+  };
+
+  const rawQuery = fallbackKeywords[categoryName] || categoryName;
+
+  container.innerHTML = `
+    <div style="grid-column: 1 / -1; text-align: center; padding: 40px;">
+      <p style="color: #38bdf8; font-weight: bold; font-size: 1.1rem;">🍿 กำลังเปิดคลังภาพยนตร์ [${escapeHtml(categoryName)}]...</p>
+    </div>
+  `;
+
+  try {
+    const res = await fetch('radar-cache.json?v=' + Date.now());
+    if (!res.ok) throw new Error('ไม่สามารถอ่าน radar-cache.json');
+    const data = await res.json();
+
+    const movies = (data.categories && data.categories[categoryName]) || [];
+    if (movies.length > 0) {
+      renderMovies(movies);
+      return;
+    } else {
+      console.warn(`หมวด [${categoryName}] ในตู้ว่างเปล่า สลับไปดึงสดผ่านเรดาร์...`);
+    }
+  } catch (err) {
+    console.warn(`เปิดตู้ไม่สำเร็จ (${err.message}) สลับไปดึงสดผ่านเรดาร์...`);
+  }
+
+  // แผนสำรอง: ถ้าอ่านตู้ไม่ได้ ให้ส่งต่อไปดึงสดด้วย triggerLiveRadar ทันที
+  triggerLiveRadar(rawQuery);
+}
+
 // ควบคุมถาดสไลด์สนับสนุน
 window.openSupportTray = function() {
   const overlay = document.getElementById('trayOverlay');
