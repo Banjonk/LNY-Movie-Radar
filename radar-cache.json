@@ -1,12 +1,12 @@
 {
-  "updated_at": "2026-10-22T03:50:34.218Z",
+  "updated_at": "2026-10-25T03:48:06.751Z",
   "categories": {
     "ดูฟรี": [
       {
-        "id": "yt-yt-2LbxiSC2cTg",
-        "title": "คุณหนูขี้แยกลายเป็นสาวตัวแม่! ฟาดกลับทุกคนที่เคยรังแก! จนหนุ่มหล่อเย็นชาหลงหัวปักหัวปำ!",
-        "poster": "https://img.youtube.com/vi/2LbxiSC2cTg/hqdefault.jpg",
-        "duration": "1:47:30",
+        "id": "yt-yt-XgXh-rSYiH4",
+        "title": "สาวรวยล้นฟ้าแกล้งจน กลับบ้านเกิดฉลองวันเกิดพ่อ ไม่คิดว่าจะถูกทั้งตระกูลดูถูกไล่ส่ง!",
+        "poster": "https://img.youtube.com/vi/XgXh-rSYiH4/hqdefault.jpg",
+        "duration": "1:46:17",
         "starting_price": "ดูฟรี 0 บ.",
         "categories": [
           "ดูฟรี",
@@ -20,7 +20,191 @@
         "sources": [
           {
             "label": "▶ ดูฟรีบน YouTube",
-            "url": "https://www.youtube.com/watch?v=yt-2LbxiSC2cTg",
+            "url": "https://www.youtube.com/watch?v=yt-XgXh-rSYiH4",
+            "class": "btn-youtube"
+          }
+        ]
+      },
+      {
+        "id": "yt-yt-XGescgSFVzQ",
+        "title": "【พากย์ไทย】มหันตภัยฉลามยักษ์ถล่มมหาสมุทร! ขย้ำเรือเหล็กพังยับเยิน สาดเลือดสดเขมือบคนกลางทะเลเดือด🦈🚢💥",
+        "poster": "https://img.youtube.com/vi/XGescgSFVzQ/hqdefault.jpg",
+        "duration": "1:15:35",
+        "starting_price": "ดูฟรี 0 บ.",
+        "categories": [
+          "ดูฟรี",
+          "ดูฟรี",
+          "YouTube"
+        ],
+        "specs": {
+          "resolution": "1080p / 720p HD",
+          "audio": "พากย์ไทย"
+        },
+        "sources": [
+          {
+            "label": "▶ ดูฟรีบน YouTube",
+            "url": "https://www.youtube.com/watch?v=yt-XGescgSFVzQ",
+            "class": "btn-youtube"
+          }
+        ]
+      },
+      {
+        "id": "yt-yt-twHM46nIZ8Y",
+        "title": "เศรษฐีแกล้งจน ลูกแท้ๆ เมิน แต่อีกคนทุ่มเงินเก็บช่วยพ่อ! พอรู้ความจริง ลูกแท้ๆ เสียใจแทบคลั่ง",
+        "poster": "https://img.youtube.com/vi/twHM46nIZ8Y/hqdefault.jpg",
+        "duration": "1:35:20",
+        "starting_price": "ดูฟรี 0 บ.",
+        "categories": [
+          "ดูฟรี",
+          "ดูฟรี",
+          "YouTube"
+        ],
+        "specs": {
+          "resolution": "1080p / 720p HD",
+          "audio": "พากย์ไทย"
+        },
+        "sources": [
+          {
+            "label": "▶ ดูฟรีบน YouTube",
+            "url": "https://www.youtube.com/watch?v=yt-twHM46nIZ8Y",
+            "class": "btn-youtube"
+          }
+        ]
+      },
+      {
+        "id": "yt-yt-SgFx-xWKDSU",
+        "title": "【พากย์ไทย🔥】เจสัน สเตแธม มือสไนเปอร์พระกาฬ ยิงไม่เคยพลาด!💥 ลุยเดี่ยวกวาดล้างแก๊งก่อการร้ายจนสิ้นซาก!",
+        "poster": "https://img.youtube.com/vi/SgFx-xWKDSU/hqdefault.jpg",
+        "duration": "1:18:56",
+        "starting_price": "ดูฟรี 0 บ.",
+        "categories": [
+          "ดูฟรี",
+          "ดูฟรี",
+          "YouTube"
+        ],
+        "specs": {
+          "resolution": "1080p / 720p HD",
+          "audio": "พากย์ไทย"
+        },
+        "sources": [
+          {
+            "label": "▶ ดูฟรีบน YouTube",
+            "url": "https://www.youtube.com/watch?v=yt-SgFx-xWKDSU",
+            "class": "btn-youtube"
+          }
+        ]
+      },
+      {
+        "id": "yt-yt-EWxJhwL0X4k",
+        "title": "หนังคอมเมดี้ | หงจินเป่า | ผีกัดทะลุชาติ (My Flying Wife) | Mei Ah Movie | พากย์ไทย",
+        "poster": "https://img.youtube.com/vi/EWxJhwL0X4k/hqdefault.jpg",
+        "duration": "1:31:06",
+        "starting_price": "ดูฟรี 0 บ.",
+        "categories": [
+          "ดูฟรี",
+          "ดูฟรี",
+          "YouTube"
+        ],
+        "specs": {
+          "resolution": "1080p / 720p HD",
+          "audio": "พากย์ไทย"
+        },
+        "sources": [
+          {
+            "label": "▶ ดูฟรีบน YouTube",
+            "url": "https://www.youtube.com/watch?v=yt-EWxJhwL0X4k",
+            "class": "btn-youtube"
+          }
+        ]
+      },
+      {
+        "id": "yt-yt-StNgKzwwdZ4",
+        "title": "【พากย์ไทย】เทพสังหารคืนชีพ! นักฆ่ามือหนึ่งเปิดศึกถล่มมาเฟีย ช่วยน้องสาวให้รอด!",
+        "poster": "https://img.youtube.com/vi/StNgKzwwdZ4/hqdefault.jpg",
+        "duration": "1:36:16",
+        "starting_price": "ดูฟรี 0 บ.",
+        "categories": [
+          "ดูฟรี",
+          "ดูฟรี",
+          "YouTube"
+        ],
+        "specs": {
+          "resolution": "1080p / 720p HD",
+          "audio": "พากย์ไทย"
+        },
+        "sources": [
+          {
+            "label": "▶ ดูฟรีบน YouTube",
+            "url": "https://www.youtube.com/watch?v=yt-StNgKzwwdZ4",
+            "class": "btn-youtube"
+          }
+        ]
+      },
+      {
+        "id": "yt-yt-8qzPXJ3qo04",
+        "title": "หนังเต็มเรื่องพากย์ไทย | ฉลามคลั่ง พยัคฆ์ฆ่าไม่เลือก Horror Shark | หนังจีน/หนังฉลาม | YOUKU",
+        "poster": "https://img.youtube.com/vi/8qzPXJ3qo04/hqdefault.jpg",
+        "duration": "1:16:20",
+        "starting_price": "ดูฟรี 0 บ.",
+        "categories": [
+          "ดูฟรี",
+          "ดูฟรี",
+          "YouTube"
+        ],
+        "specs": {
+          "resolution": "1080p / 720p HD",
+          "audio": "พากย์ไทย"
+        },
+        "sources": [
+          {
+            "label": "▶ ดูฟรีบน YouTube",
+            "url": "https://www.youtube.com/watch?v=yt-8qzPXJ3qo04",
+            "class": "btn-youtube"
+          }
+        ]
+      },
+      {
+        "id": "yt-yt-vPTy24npiTc",
+        "title": "เพิ่งทะลุมิติมาก็มีเมียเก่งขั้นเทพ! เขาจึงงัดความรู้ยุคใหม่โชว์ฝีมือ จนทุกสำนักยอมก้มหัว!",
+        "poster": "https://img.youtube.com/vi/vPTy24npiTc/hqdefault.jpg",
+        "duration": "3:08:32",
+        "starting_price": "ดูฟรี 0 บ.",
+        "categories": [
+          "ดูฟรี",
+          "ดูฟรี",
+          "YouTube"
+        ],
+        "specs": {
+          "resolution": "1080p / 720p HD",
+          "audio": "พากย์ไทย"
+        },
+        "sources": [
+          {
+            "label": "▶ ดูฟรีบน YouTube",
+            "url": "https://www.youtube.com/watch?v=yt-vPTy24npiTc",
+            "class": "btn-youtube"
+          }
+        ]
+      },
+      {
+        "id": "yt-yt-U9TSYMO2r1Q",
+        "title": "【พากย์ไทย】เทพสังหารถูกขัง 30 ปี! หวนคืนยุทธภพ กวาดล้างยอดฝีมือทั่วหล้า!",
+        "poster": "https://img.youtube.com/vi/U9TSYMO2r1Q/hqdefault.jpg",
+        "duration": "1:24:15",
+        "starting_price": "ดูฟรี 0 บ.",
+        "categories": [
+          "ดูฟรี",
+          "ดูฟรี",
+          "YouTube"
+        ],
+        "specs": {
+          "resolution": "1080p / 720p HD",
+          "audio": "พากย์ไทย"
+        },
+        "sources": [
+          {
+            "label": "▶ ดูฟรีบน YouTube",
+            "url": "https://www.youtube.com/watch?v=yt-U9TSYMO2r1Q",
             "class": "btn-youtube"
           }
         ]
@@ -49,10 +233,10 @@
         ]
       },
       {
-        "id": "yt-yt-1NiEfw9b8qw",
-        "title": "💥หนุ่มยุคใหม่ทะลุมิติเป็นชาวบ้านยุคจั๋นกั๋ว! หนี้ท่วมหัว ใช้ปัญญาขงจื๊อกับวิชาทำเกลือพลิกชีวิต!",
-        "poster": "https://img.youtube.com/vi/1NiEfw9b8qw/hqdefault.jpg",
-        "duration": "2:33:57",
+        "id": "yt-yt-EyjFV8_l6Qc",
+        "title": "ถูกเสนอพันล้านให้ล้มแก๊งมาเฟีย เทพสงครามหนุ่มเลยออกโรง ถล่มพวกมันจนยับ!",
+        "poster": "https://img.youtube.com/vi/EyjFV8_l6Qc/hqdefault.jpg",
+        "duration": "2:12:21",
         "starting_price": "ดูฟรี 0 บ.",
         "categories": [
           "ดูฟรี",
@@ -66,16 +250,16 @@
         "sources": [
           {
             "label": "▶ ดูฟรีบน YouTube",
-            "url": "https://www.youtube.com/watch?v=yt-1NiEfw9b8qw",
+            "url": "https://www.youtube.com/watch?v=yt-EyjFV8_l6Qc",
             "class": "btn-youtube"
           }
         ]
       },
       {
-        "id": "yt-yt-XgXh-rSYiH4",
-        "title": "สาวรวยล้นฟ้าแกล้งจน กลับบ้านเกิดฉลองวันเกิดพ่อ ไม่คิดว่าจะถูกทั้งตระกูลดูถูกไล่ส่ง!",
-        "poster": "https://img.youtube.com/vi/XgXh-rSYiH4/hqdefault.jpg",
-        "duration": "1:46:17",
+        "id": "yt-yt-EzFZsym9I0Y",
+        "title": "ชายขับรถทางไกลระหว่างกลับบ้าน พบสาวสวยเป็นลม! พอดูชัดๆ กลับเป็นภรรยาตัวเอง แถมเธอยังท้องลูกของเขา!",
+        "poster": "https://img.youtube.com/vi/EzFZsym9I0Y/hqdefault.jpg",
+        "duration": "1:19:57",
         "starting_price": "ดูฟรี 0 บ.",
         "categories": [
           "ดูฟรี",
@@ -89,30 +273,7 @@
         "sources": [
           {
             "label": "▶ ดูฟรีบน YouTube",
-            "url": "https://www.youtube.com/watch?v=yt-XgXh-rSYiH4",
-            "class": "btn-youtube"
-          }
-        ]
-      },
-      {
-        "id": "yt-yt-W597DsWPCA4",
-        "title": "มหาเศรษฐีแกล้งพิการเพื่อหาภรรยา ถูกสาวสวย 100 คนดูถูก แต่มีเพียงเธอที่ไม่รังเกียจ!",
-        "poster": "https://img.youtube.com/vi/W597DsWPCA4/hqdefault.jpg",
-        "duration": "1:41:51",
-        "starting_price": "ดูฟรี 0 บ.",
-        "categories": [
-          "ดูฟรี",
-          "ดูฟรี",
-          "YouTube"
-        ],
-        "specs": {
-          "resolution": "1080p / 720p HD",
-          "audio": "พากย์ไทย"
-        },
-        "sources": [
-          {
-            "label": "▶ ดูฟรีบน YouTube",
-            "url": "https://www.youtube.com/watch?v=yt-W597DsWPCA4",
+            "url": "https://www.youtube.com/watch?v=yt-EzFZsym9I0Y",
             "class": "btn-youtube"
           }
         ]
@@ -141,10 +302,10 @@
         ]
       },
       {
-        "id": "yt-yt-mEEH5Jx2XQY",
-        "title": "【พากย์ไทย】สามีประกาศชู้ท้องต่อหน้าทุกคน ภรรยาไม่ร้องไห้ เก็บกระเป๋าหายตัวไปทันที!",
-        "poster": "https://img.youtube.com/vi/mEEH5Jx2XQY/hqdefault.jpg",
-        "duration": "1:28:33",
+        "id": "yt-yt-W597DsWPCA4",
+        "title": "มหาเศรษฐีแกล้งพิการเพื่อหาภรรยา ถูกสาวสวย 100 คนดูถูก แต่มีเพียงเธอที่ไม่รังเกียจ!",
+        "poster": "https://img.youtube.com/vi/W597DsWPCA4/hqdefault.jpg",
+        "duration": "1:41:51",
         "starting_price": "ดูฟรี 0 บ.",
         "categories": [
           "ดูฟรี",
@@ -158,16 +319,16 @@
         "sources": [
           {
             "label": "▶ ดูฟรีบน YouTube",
-            "url": "https://www.youtube.com/watch?v=yt-mEEH5Jx2XQY",
+            "url": "https://www.youtube.com/watch?v=yt-W597DsWPCA4",
             "class": "btn-youtube"
           }
         ]
       },
       {
-        "id": "yt-yt-OgARfFYr5nk",
-        "title": "ปีอดอยาก! ชายหนุ่มแตะบ่อน้ำแห้ง กลับมีพืชผลผุดขึ้นนับไม่ถ้วน!",
-        "poster": "https://img.youtube.com/vi/OgARfFYr5nk/hqdefault.jpg",
-        "duration": "1:55:57",
+        "id": "yt-yt-_JmDrBm38bg",
+        "title": "ซ่อนฐานะเศรษฐีแต่งเข้าบ้านเมีย ถูกดูถูกยับ! พอผงาดคืนวงการ ครอบครัวเมียถึงกับเสียใจ!",
+        "poster": "https://img.youtube.com/vi/_JmDrBm38bg/hqdefault.jpg",
+        "duration": "1:09:21",
         "starting_price": "ดูฟรี 0 บ.",
         "categories": [
           "ดูฟรี",
@@ -181,16 +342,16 @@
         "sources": [
           {
             "label": "▶ ดูฟรีบน YouTube",
-            "url": "https://www.youtube.com/watch?v=yt-OgARfFYr5nk",
+            "url": "https://www.youtube.com/watch?v=yt-_JmDrBm38bg",
             "class": "btn-youtube"
           }
         ]
       },
       {
-        "id": "yt-yt-E_AgXZhCT7k",
-        "title": "มหาเศรษฐีกลับมาตามหาภรรยากับลูกสาวที่หายไป แต่กลับพบทั้งคู่ถูกไล่ไปขอทานในชนบท เขาเดือดจัดทันที!",
-        "poster": "https://img.youtube.com/vi/E_AgXZhCT7k/hqdefault.jpg",
-        "duration": "2:19:05",
+        "id": "yt-yt--Wbn_-HEMdA",
+        "title": "ชายยุคใหม่ข้ามมิติเป็นลูกถูกทิ้งโง่ๆ! เขายุยงพ่อค้าผู้เป็นพ่อก่อกบฏ ไม่คิดว่าพ่อคือฮ่องเต้จริง!⚔️",
+        "poster": "https://img.youtube.com/vi/-Wbn_-HEMdA/hqdefault.jpg",
+        "duration": "2:59:47",
         "starting_price": "ดูฟรี 0 บ.",
         "categories": [
           "ดูฟรี",
@@ -204,16 +365,16 @@
         "sources": [
           {
             "label": "▶ ดูฟรีบน YouTube",
-            "url": "https://www.youtube.com/watch?v=yt-E_AgXZhCT7k",
+            "url": "https://www.youtube.com/watch?v=yt--Wbn_-HEMdA",
             "class": "btn-youtube"
           }
         ]
       },
       {
-        "id": "yt-yt-b3pgye7HewM",
-        "title": "สาวจนจอมตะกละรับซีอีโอพิการที่ตกลงมาโดยบังเอิญ แค่เขาสบตาเธอ ก็หลงรักจนถอนตัวไม่ขึ้น!",
-        "poster": "https://img.youtube.com/vi/b3pgye7HewM/hqdefault.jpg",
-        "duration": "1:21:20",
+        "id": "yt-yt-50g8R_O7ikg",
+        "title": "ไม่มีใครรู้ว่าเด็กฝึกงานคนใหม่คือภรรยาลับของ CEO พอเขาออกโรงปกป้อง พวกที่รังแกเธอถึงกับผวา!",
+        "poster": "https://img.youtube.com/vi/50g8R_O7ikg/hqdefault.jpg",
+        "duration": "1:19:41",
         "starting_price": "ดูฟรี 0 บ.",
         "categories": [
           "ดูฟรี",
@@ -227,16 +388,16 @@
         "sources": [
           {
             "label": "▶ ดูฟรีบน YouTube",
-            "url": "https://www.youtube.com/watch?v=yt-b3pgye7HewM",
+            "url": "https://www.youtube.com/watch?v=yt-50g8R_O7ikg",
             "class": "btn-youtube"
           }
         ]
       },
       {
-        "id": "yt-yt-QPr7YR15CZ4",
-        "title": "โดนถอนหมั้นกลางงานเพราะแก่เกินไป เธอหันแต่งหนุ่มรุ่นน้อง ใครจะคิดว่าเขาคือ CEO พันล้านที่ตามใจไมหยุด",
-        "poster": "https://img.youtube.com/vi/QPr7YR15CZ4/hqdefault.jpg",
-        "duration": "2:22:41",
+        "id": "yt-yt-2LbxiSC2cTg",
+        "title": "คุณหนูขี้แยกลายเป็นสาวตัวแม่! ฟาดกลับทุกคนที่เคยรังแก! จนหนุ่มหล่อเย็นชาหลงหัวปักหัวปำ!",
+        "poster": "https://img.youtube.com/vi/2LbxiSC2cTg/hqdefault.jpg",
+        "duration": "1:47:30",
         "starting_price": "ดูฟรี 0 บ.",
         "categories": [
           "ดูฟรี",
@@ -250,214 +411,7 @@
         "sources": [
           {
             "label": "▶ ดูฟรีบน YouTube",
-            "url": "https://www.youtube.com/watch?v=yt-QPr7YR15CZ4",
-            "class": "btn-youtube"
-          }
-        ]
-      },
-      {
-        "id": "yt-yt-ofrFEkCQEl8",
-        "title": "【พากย์ไทย】จับได้ว่าสามีกอดชู้ท้อง! เธอเก็บกระเป๋าหนี แต่เขากลับร้องไห้ขอให้เธออยู่ต่อ!",
-        "poster": "https://img.youtube.com/vi/ofrFEkCQEl8/hqdefault.jpg",
-        "duration": "1:42:16",
-        "starting_price": "ดูฟรี 0 บ.",
-        "categories": [
-          "ดูฟรี",
-          "ดูฟรี",
-          "YouTube"
-        ],
-        "specs": {
-          "resolution": "1080p / 720p HD",
-          "audio": "พากย์ไทย"
-        },
-        "sources": [
-          {
-            "label": "▶ ดูฟรีบน YouTube",
-            "url": "https://www.youtube.com/watch?v=yt-ofrFEkCQEl8",
-            "class": "btn-youtube"
-          }
-        ]
-      },
-      {
-        "id": "yt-yt-5yZLGvcGQfM",
-        "title": "【พากย์ไทย】พระเกจิออกธุดงค์ตามหาของวิเศษ! โดนอสูรร้ายจอมเทพตามล่า ดวลอาคมสู้ตาย😱💥🔥",
-        "poster": "https://img.youtube.com/vi/5yZLGvcGQfM/hqdefault.jpg",
-        "duration": "1:32:05",
-        "starting_price": "ดูฟรี 0 บ.",
-        "categories": [
-          "ดูฟรี",
-          "ดูฟรี",
-          "YouTube"
-        ],
-        "specs": {
-          "resolution": "1080p / 720p HD",
-          "audio": "พากย์ไทย"
-        },
-        "sources": [
-          {
-            "label": "▶ ดูฟรีบน YouTube",
-            "url": "https://www.youtube.com/watch?v=yt-5yZLGvcGQfM",
-            "class": "btn-youtube"
-          }
-        ]
-      },
-      {
-        "id": "yt-yt-YH-SAuj8OWQ",
-        "title": "✨CEO วัย 30 ไม่เคยยิ้ม! จนภรรยาตัวน้อยซน เขาก็ยิ้มออกในที่สุด!💖",
-        "poster": "https://img.youtube.com/vi/YH-SAuj8OWQ/hqdefault.jpg",
-        "duration": "1:54:34",
-        "starting_price": "ดูฟรี 0 บ.",
-        "categories": [
-          "ดูฟรี",
-          "ดูฟรี",
-          "YouTube"
-        ],
-        "specs": {
-          "resolution": "1080p / 720p HD",
-          "audio": "พากย์ไทย"
-        },
-        "sources": [
-          {
-            "label": "▶ ดูฟรีบน YouTube",
-            "url": "https://www.youtube.com/watch?v=yt-YH-SAuj8OWQ",
-            "class": "btn-youtube"
-          }
-        ]
-      },
-      {
-        "id": "yt-yt-TUkyY61kUOc",
-        "title": "【พากย์ไทย】ครอบครัวถูกฆ่า! พ่อค้าอาวุธติดอาวุธบุกถล่มฐานผู้ก่อการร้าย ล้างแค้นเลือด!",
-        "poster": "https://img.youtube.com/vi/TUkyY61kUOc/hqdefault.jpg",
-        "duration": "1:19:24",
-        "starting_price": "ดูฟรี 0 บ.",
-        "categories": [
-          "ดูฟรี",
-          "ดูฟรี",
-          "YouTube"
-        ],
-        "specs": {
-          "resolution": "1080p / 720p HD",
-          "audio": "พากย์ไทย"
-        },
-        "sources": [
-          {
-            "label": "▶ ดูฟรีบน YouTube",
-            "url": "https://www.youtube.com/watch?v=yt-TUkyY61kUOc",
-            "class": "btn-youtube"
-          }
-        ]
-      },
-      {
-        "id": "yt-yt-ukZIPVciEQg",
-        "title": "หนังเต็มเรื่องพากย์ไทย | สุดยอดสาวงามเจ้าสำนักเคล็ดวิชาเหยี่ยนซือ | หนังจีน/หนังย้อนยุค | YOUKU",
-        "poster": "https://img.youtube.com/vi/ukZIPVciEQg/hqdefault.jpg",
-        "duration": "1:33:05",
-        "starting_price": "ดูฟรี 0 บ.",
-        "categories": [
-          "ดูฟรี",
-          "ดูฟรี",
-          "YouTube"
-        ],
-        "specs": {
-          "resolution": "1080p / 720p HD",
-          "audio": "พากย์ไทย"
-        },
-        "sources": [
-          {
-            "label": "▶ ดูฟรีบน YouTube",
-            "url": "https://www.youtube.com/watch?v=yt-ukZIPVciEQg",
-            "class": "btn-youtube"
-          }
-        ]
-      },
-      {
-        "id": "yt-yt-xjXShOymuVQ",
-        "title": "ทายาทสาวถูกคู่หมั้นใส่ร้ายขังคุกทรมาน ทุกคนคิดว่าเธอจบแล้ว แต่เธอพบมหาเศรษฐีที่ช่วยล้างแค้นจนสุดทาง",
-        "poster": "https://img.youtube.com/vi/xjXShOymuVQ/hqdefault.jpg",
-        "duration": "1:56:21",
-        "starting_price": "ดูฟรี 0 บ.",
-        "categories": [
-          "ดูฟรี",
-          "ดูฟรี",
-          "YouTube"
-        ],
-        "specs": {
-          "resolution": "1080p / 720p HD",
-          "audio": "พากย์ไทย"
-        },
-        "sources": [
-          {
-            "label": "▶ ดูฟรีบน YouTube",
-            "url": "https://www.youtube.com/watch?v=yt-xjXShOymuVQ",
-            "class": "btn-youtube"
-          }
-        ]
-      },
-      {
-        "id": "yt-yt-eJX29iaqWYA",
-        "title": "ดูหนังออนไลน์HD แฮกเกอร์ อัจฉริยะแฮกข้ามโลก เต็มเรื่อง พากย์ไทย",
-        "poster": "https://img.youtube.com/vi/eJX29iaqWYA/hqdefault.jpg",
-        "duration": "1:46:58",
-        "starting_price": "ดูฟรี 0 บ.",
-        "categories": [
-          "ดูฟรี",
-          "ดูฟรี",
-          "YouTube"
-        ],
-        "specs": {
-          "resolution": "1080p / 720p HD",
-          "audio": "พากย์ไทย"
-        },
-        "sources": [
-          {
-            "label": "▶ ดูฟรีบน YouTube",
-            "url": "https://www.youtube.com/watch?v=yt-eJX29iaqWYA",
-            "class": "btn-youtube"
-          }
-        ]
-      },
-      {
-        "id": "yt-yt-796Yu23SYa0",
-        "title": "หนังพากย์ไทย | จินซานศึกปราบมารสะท้านฟ้า Invisible Guard😲⚔️ | หนังจีน2026",
-        "poster": "https://img.youtube.com/vi/796Yu23SYa0/hqdefault.jpg",
-        "duration": "1:32:55",
-        "starting_price": "ดูฟรี 0 บ.",
-        "categories": [
-          "ดูฟรี",
-          "ดูฟรี",
-          "YouTube"
-        ],
-        "specs": {
-          "resolution": "1080p / 720p HD",
-          "audio": "พากย์ไทย"
-        },
-        "sources": [
-          {
-            "label": "▶ ดูฟรีบน YouTube",
-            "url": "https://www.youtube.com/watch?v=yt-796Yu23SYa0",
-            "class": "btn-youtube"
-          }
-        ]
-      },
-      {
-        "id": "yt-yt-5PBxhHgHy4Q",
-        "title": "หนังคอมเมดี้ | จางเจียฮุย | คนตัดเซียน 3 (My Name Is Nobody) | Mei Ah Movie | พากย์ไทย",
-        "poster": "https://img.youtube.com/vi/5PBxhHgHy4Q/hqdefault.jpg",
-        "duration": "1:37:13",
-        "starting_price": "ดูฟรี 0 บ.",
-        "categories": [
-          "ดูฟรี",
-          "ดูฟรี",
-          "YouTube"
-        ],
-        "specs": {
-          "resolution": "1080p / 720p HD",
-          "audio": "พากย์ไทย"
-        },
-        "sources": [
-          {
-            "label": "▶ ดูฟรีบน YouTube",
-            "url": "https://www.youtube.com/watch?v=yt-5PBxhHgHy4Q",
+            "url": "https://www.youtube.com/watch?v=yt-2LbxiSC2cTg",
             "class": "btn-youtube"
           }
         ]
@@ -580,10 +534,10 @@
         ]
       },
       {
-        "id": "yt-yt-J_DO2v3KkZk",
-        "title": "สารคดีสายน้ำแห่งโครเอเชีย",
-        "poster": "https://img.youtube.com/vi/J_DO2v3KkZk/hqdefault.jpg",
-        "duration": "47:03",
+        "id": "yt-yt-6pF4vvfXM-k",
+        "title": "ดินแดนที่เต็มไปด้วยเรื่องมหัศจรรย์เหนือความคาดหมาย | สารคดี สำรวจโลก ตอน ความลับแห่งออสเตรเลีย",
+        "poster": "https://img.youtube.com/vi/6pF4vvfXM-k/hqdefault.jpg",
+        "duration": "51:24",
         "starting_price": "ดูฟรี 0 บ.",
         "categories": [
           "สารคดี",
@@ -597,30 +551,7 @@
         "sources": [
           {
             "label": "▶ ดูฟรีบน YouTube",
-            "url": "https://www.youtube.com/watch?v=yt-J_DO2v3KkZk",
-            "class": "btn-youtube"
-          }
-        ]
-      },
-      {
-        "id": "yt-yt-DOa3Oq9rypM",
-        "title": "คุ้มไหม? เมื่อคนกว่าล้านคนต้องย้ายบ้านเพื่อสร้างเขื่อน | สารคดีสำรวจโลก ตอน เรื่องจริงของเขื่อนยักษ์",
-        "poster": "https://img.youtube.com/vi/DOa3Oq9rypM/hqdefault.jpg",
-        "duration": "52:08",
-        "starting_price": "ดูฟรี 0 บ.",
-        "categories": [
-          "สารคดี",
-          "ดูฟรี",
-          "YouTube"
-        ],
-        "specs": {
-          "resolution": "1080p / 720p HD",
-          "audio": "พากย์ไทย"
-        },
-        "sources": [
-          {
-            "label": "▶ ดูฟรีบน YouTube",
-            "url": "https://www.youtube.com/watch?v=yt-DOa3Oq9rypM",
+            "url": "https://www.youtube.com/watch?v=yt-6pF4vvfXM-k",
             "class": "btn-youtube"
           }
         ]
@@ -649,6 +580,75 @@
         ]
       },
       {
+        "id": "yt-yt-HTHcQAuLEvE",
+        "title": "สัตว์ขั้วโลก อยู่รอดได้อย่างไร ? | สารคดี สำรวจโลก",
+        "poster": "https://img.youtube.com/vi/HTHcQAuLEvE/hqdefault.jpg",
+        "duration": "1:08:08",
+        "starting_price": "ดูฟรี 0 บ.",
+        "categories": [
+          "สารคดี",
+          "ดูฟรี",
+          "YouTube"
+        ],
+        "specs": {
+          "resolution": "1080p / 720p HD",
+          "audio": "พากย์ไทย"
+        },
+        "sources": [
+          {
+            "label": "▶ ดูฟรีบน YouTube",
+            "url": "https://www.youtube.com/watch?v=yt-HTHcQAuLEvE",
+            "class": "btn-youtube"
+          }
+        ]
+      },
+      {
+        "id": "yt-yt-DOa3Oq9rypM",
+        "title": "คุ้มไหม? เมื่อคนกว่าล้านคนต้องย้ายบ้านเพื่อสร้างเขื่อน | สารคดีสำรวจโลก ตอน เรื่องจริงของเขื่อนยักษ์",
+        "poster": "https://img.youtube.com/vi/DOa3Oq9rypM/hqdefault.jpg",
+        "duration": "52:08",
+        "starting_price": "ดูฟรี 0 บ.",
+        "categories": [
+          "สารคดี",
+          "ดูฟรี",
+          "YouTube"
+        ],
+        "specs": {
+          "resolution": "1080p / 720p HD",
+          "audio": "พากย์ไทย"
+        },
+        "sources": [
+          {
+            "label": "▶ ดูฟรีบน YouTube",
+            "url": "https://www.youtube.com/watch?v=yt-DOa3Oq9rypM",
+            "class": "btn-youtube"
+          }
+        ]
+      },
+      {
+        "id": "yt-yt-8dGNYt4vFQ0",
+        "title": "วิมานดงหนามแห่งแอฟริกา | สารคดี สำรวจโลก",
+        "poster": "https://img.youtube.com/vi/8dGNYt4vFQ0/hqdefault.jpg",
+        "duration": "42:56",
+        "starting_price": "ดูฟรี 0 บ.",
+        "categories": [
+          "สารคดี",
+          "ดูฟรี",
+          "YouTube"
+        ],
+        "specs": {
+          "resolution": "1080p / 720p HD",
+          "audio": "พากย์ไทย"
+        },
+        "sources": [
+          {
+            "label": "▶ ดูฟรีบน YouTube",
+            "url": "https://www.youtube.com/watch?v=yt-8dGNYt4vFQ0",
+            "class": "btn-youtube"
+          }
+        ]
+      },
+      {
         "id": "yt-yt-otc8_nzk0ZY",
         "title": "ล่าทอร์นาโด ภารกิจเสี่ยงตายเพื่อภาพที่โลกไม่เคยเห็น | สารคดี สำรวจโลก ท้าทายพายุทอร์นาโด",
         "poster": "https://img.youtube.com/vi/otc8_nzk0ZY/hqdefault.jpg",
@@ -667,29 +667,6 @@
           {
             "label": "▶ ดูฟรีบน YouTube",
             "url": "https://www.youtube.com/watch?v=yt-otc8_nzk0ZY",
-            "class": "btn-youtube"
-          }
-        ]
-      },
-      {
-        "id": "yt-yt-6pF4vvfXM-k",
-        "title": "ดินแดนที่เต็มไปด้วยเรื่องมหัศจรรย์เหนือความคาดหมาย | สารคดี สำรวจโลก ตอน ความลับแห่งออสเตรเลีย",
-        "poster": "https://img.youtube.com/vi/6pF4vvfXM-k/hqdefault.jpg",
-        "duration": "51:24",
-        "starting_price": "ดูฟรี 0 บ.",
-        "categories": [
-          "สารคดี",
-          "ดูฟรี",
-          "YouTube"
-        ],
-        "specs": {
-          "resolution": "1080p / 720p HD",
-          "audio": "พากย์ไทย"
-        },
-        "sources": [
-          {
-            "label": "▶ ดูฟรีบน YouTube",
-            "url": "https://www.youtube.com/watch?v=yt-6pF4vvfXM-k",
             "class": "btn-youtube"
           }
         ]
@@ -718,10 +695,10 @@
         ]
       },
       {
-        "id": "yt-yt-HTHcQAuLEvE",
-        "title": "สัตว์ขั้วโลก อยู่รอดได้อย่างไร ? | สารคดี สำรวจโลก",
-        "poster": "https://img.youtube.com/vi/HTHcQAuLEvE/hqdefault.jpg",
-        "duration": "1:08:08",
+        "id": "yt-yt-lf1SwUD8hsA",
+        "title": "สารคดี สัตว์ป่าเมืองไทย",
+        "poster": "https://img.youtube.com/vi/lf1SwUD8hsA/hqdefault.jpg",
+        "duration": "43:13",
         "starting_price": "ดูฟรี 0 บ.",
         "categories": [
           "สารคดี",
@@ -735,16 +712,16 @@
         "sources": [
           {
             "label": "▶ ดูฟรีบน YouTube",
-            "url": "https://www.youtube.com/watch?v=yt-HTHcQAuLEvE",
+            "url": "https://www.youtube.com/watch?v=yt-lf1SwUD8hsA",
             "class": "btn-youtube"
           }
         ]
       },
       {
-        "id": "yt-yt-7WET19J5Kp4",
-        "title": "เปิดโลกอียิปต์โบราณ - มหาอำนาจแห่งไนล์ ล่มสลายลงได้อย่างไร ? | สารคดี สำรวจโลก",
-        "poster": "https://img.youtube.com/vi/7WET19J5Kp4/hqdefault.jpg",
-        "duration": "48:30",
+        "id": "yt-yt-JW0roP3I1Wk",
+        "title": "ที-เรกซ์ ราชาไดโนเสาร์ | สารคดี สำรวจโลก",
+        "poster": "https://img.youtube.com/vi/JW0roP3I1Wk/hqdefault.jpg",
+        "duration": "51:27",
         "starting_price": "ดูฟรี 0 บ.",
         "categories": [
           "สารคดี",
@@ -758,16 +735,16 @@
         "sources": [
           {
             "label": "▶ ดูฟรีบน YouTube",
-            "url": "https://www.youtube.com/watch?v=yt-7WET19J5Kp4",
+            "url": "https://www.youtube.com/watch?v=yt-JW0roP3I1Wk",
             "class": "btn-youtube"
           }
         ]
       },
       {
-        "id": "yt-yt-7-apJm5HxPs",
-        "title": "ตำนานที่ธรรมชาติเขียนไว้ | สารคดีปรากฏการณ์ธรรมชาติ 4K",
-        "poster": "https://img.youtube.com/vi/7-apJm5HxPs/hqdefault.jpg",
-        "duration": "1:01:03",
+        "id": "yt-yt-i_AmspZKDA0",
+        "title": "อันตรายกลางทะเล - ฝ่าคลื่นคลั่ง สัมผัสประสบการณ์เฉียดตาย | สารคดี สำรวจโลก",
+        "poster": "https://img.youtube.com/vi/i_AmspZKDA0/hqdefault.jpg",
+        "duration": "45:28",
         "starting_price": "ดูฟรี 0 บ.",
         "categories": [
           "สารคดี",
@@ -781,16 +758,16 @@
         "sources": [
           {
             "label": "▶ ดูฟรีบน YouTube",
-            "url": "https://www.youtube.com/watch?v=yt-7-apJm5HxPs",
+            "url": "https://www.youtube.com/watch?v=yt-i_AmspZKDA0",
             "class": "btn-youtube"
           }
         ]
       },
       {
-        "id": "yt-yt-niKpN_aC07I",
-        "title": "สารคดี: ",
-        "poster": "https://img.youtube.com/vi/niKpN_aC07I/hqdefault.jpg",
-        "duration": "43:12",
+        "id": "yt-yt-caHcs_o27k8",
+        "title": "เผชิญหน้ามนุษย์ต่างดาว | สารคดี สำรวจโลก",
+        "poster": "https://img.youtube.com/vi/caHcs_o27k8/hqdefault.jpg",
+        "duration": "50:52",
         "starting_price": "ดูฟรี 0 บ.",
         "categories": [
           "สารคดี",
@@ -804,99 +781,7 @@
         "sources": [
           {
             "label": "▶ ดูฟรีบน YouTube",
-            "url": "https://www.youtube.com/watch?v=yt-niKpN_aC07I",
-            "class": "btn-youtube"
-          }
-        ]
-      },
-      {
-        "id": "yt-yt-HrP1a5sSJZU",
-        "title": "15 ป่าดิบชื้นที่อันตรายที่สุดในโลก",
-        "poster": "https://img.youtube.com/vi/HrP1a5sSJZU/hqdefault.jpg",
-        "duration": "42:43",
-        "starting_price": "ดูฟรี 0 บ.",
-        "categories": [
-          "สารคดี",
-          "ดูฟรี",
-          "YouTube"
-        ],
-        "specs": {
-          "resolution": "1080p / 720p HD",
-          "audio": "พากย์ไทย"
-        },
-        "sources": [
-          {
-            "label": "▶ ดูฟรีบน YouTube",
-            "url": "https://www.youtube.com/watch?v=yt-HrP1a5sSJZU",
-            "class": "btn-youtube"
-          }
-        ]
-      },
-      {
-        "id": "yt-yt-958jxI9kQ2w",
-        "title": "สำรวจดินแดนสัตว์ป่าแห่งชายฝั่งตะวันตกของอเมริกา | สารคดี สำรวจโลก ตอน ห้องเรียนธรรมชาติ",
-        "poster": "https://img.youtube.com/vi/958jxI9kQ2w/hqdefault.jpg",
-        "duration": "42:04",
-        "starting_price": "ดูฟรี 0 บ.",
-        "categories": [
-          "สารคดี",
-          "ดูฟรี",
-          "YouTube"
-        ],
-        "specs": {
-          "resolution": "1080p / 720p HD",
-          "audio": "พากย์ไทย"
-        },
-        "sources": [
-          {
-            "label": "▶ ดูฟรีบน YouTube",
-            "url": "https://www.youtube.com/watch?v=yt-958jxI9kQ2w",
-            "class": "btn-youtube"
-          }
-        ]
-      },
-      {
-        "id": "yt-yt-7BZRsQ3QKxU",
-        "title": "สารคดีชีวิตสัตว์มหัศจรรย์ รวม 2 ตอน ดูสนุกๆเพลินๆ",
-        "poster": "https://img.youtube.com/vi/7BZRsQ3QKxU/hqdefault.jpg",
-        "duration": "1:05:00",
-        "starting_price": "ดูฟรี 0 บ.",
-        "categories": [
-          "สารคดี",
-          "ดูฟรี",
-          "YouTube"
-        ],
-        "specs": {
-          "resolution": "1080p / 720p HD",
-          "audio": "พากย์ไทย"
-        },
-        "sources": [
-          {
-            "label": "▶ ดูฟรีบน YouTube",
-            "url": "https://www.youtube.com/watch?v=yt-7BZRsQ3QKxU",
-            "class": "btn-youtube"
-          }
-        ]
-      },
-      {
-        "id": "yt-yt-lpxt5vRwJPY",
-        "title": "ผจญภัยผ่านกาลเวลา (เต็มเรื่อง) | สารคดี สำรวจโลก",
-        "poster": "https://img.youtube.com/vi/lpxt5vRwJPY/hqdefault.jpg",
-        "duration": "49:30",
-        "starting_price": "ดูฟรี 0 บ.",
-        "categories": [
-          "สารคดี",
-          "ดูฟรี",
-          "YouTube"
-        ],
-        "specs": {
-          "resolution": "1080p / 720p HD",
-          "audio": "พากย์ไทย"
-        },
-        "sources": [
-          {
-            "label": "▶ ดูฟรีบน YouTube",
-            "url": "https://www.youtube.com/watch?v=yt-lpxt5vRwJPY",
+            "url": "https://www.youtube.com/watch?v=yt-caHcs_o27k8",
             "class": "btn-youtube"
           }
         ]
@@ -904,10 +789,10 @@
     ],
     "หนังไทย": [
       {
-        "id": "yt-yt-qbNPPvwFMjI",
-        "title": "🎬 หนังไทยเก่าในตำนาน – มือปราบทมิฬ (2529) (สรพงศ์ ชาตรี ) หนังเต็มเรื่อง แอคชั่น ดูฟรี",
-        "poster": "https://img.youtube.com/vi/qbNPPvwFMjI/hqdefault.jpg",
-        "duration": "1:22:41",
+        "id": "yt-yt-KRWTpds-YJk",
+        "title": "นักเลงโตเมืองอีสาน (2525) - สรพงศ์ ชาตรี หนังไทยเก่า เต็มเรื่อง【โพชงฟิล์ม Pochong Film】",
+        "poster": "https://img.youtube.com/vi/KRWTpds-YJk/hqdefault.jpg",
+        "duration": "1:57:23",
         "starting_price": "ดูฟรี 0 บ.",
         "categories": [
           "หนังไทย",
@@ -921,30 +806,7 @@
         "sources": [
           {
             "label": "▶ ดูฟรีบน YouTube",
-            "url": "https://www.youtube.com/watch?v=yt-qbNPPvwFMjI",
-            "class": "btn-youtube"
-          }
-        ]
-      },
-      {
-        "id": "yt-yt-JESdnr2lmy4",
-        "title": "เพชรภูเรือ (2527) - สรพงศ์ ชาตรี หนังไทยเก่า เต็มเรื่อง【โพชงฟิล์ม Pochong Film】",
-        "poster": "https://img.youtube.com/vi/JESdnr2lmy4/hqdefault.jpg",
-        "duration": "1:40:56",
-        "starting_price": "ดูฟรี 0 บ.",
-        "categories": [
-          "หนังไทย",
-          "ดูฟรี",
-          "YouTube"
-        ],
-        "specs": {
-          "resolution": "1080p / 720p HD",
-          "audio": "พากย์ไทย"
-        },
-        "sources": [
-          {
-            "label": "▶ ดูฟรีบน YouTube",
-            "url": "https://www.youtube.com/watch?v=yt-JESdnr2lmy4",
+            "url": "https://www.youtube.com/watch?v=yt-KRWTpds-YJk",
             "class": "btn-youtube"
           }
         ]
@@ -973,10 +835,10 @@
         ]
       },
       {
-        "id": "yt-yt-BplBf96qZG0",
-        "title": "หนังไทย เต็มเรื่อง ยิงทิ้ง (2529) - สรพงศ์ ชาตรี - (Classic Film)",
-        "poster": "https://img.youtube.com/vi/BplBf96qZG0/hqdefault.jpg",
-        "duration": "1:20:52",
+        "id": "yt-yt-O6HDSYr2EIA",
+        "title": "กองพันทหารเกณฑ์ ตอน แนวรักริมฟุตปาท (2539)  - หนังไทยเก่า เต็มเรื่อง【โพชงฟิล์ม Pochong Film】",
+        "poster": "https://img.youtube.com/vi/O6HDSYr2EIA/hqdefault.jpg",
+        "duration": "1:56:01",
         "starting_price": "ดูฟรี 0 บ.",
         "categories": [
           "หนังไทย",
@@ -990,16 +852,16 @@
         "sources": [
           {
             "label": "▶ ดูฟรีบน YouTube",
-            "url": "https://www.youtube.com/watch?v=yt-BplBf96qZG0",
+            "url": "https://www.youtube.com/watch?v=yt-O6HDSYr2EIA",
             "class": "btn-youtube"
           }
         ]
       },
       {
-        "id": "yt-yt-KRWTpds-YJk",
-        "title": "นักเลงโตเมืองอีสาน (2525) - สรพงศ์ ชาตรี หนังไทยเก่า เต็มเรื่อง【โพชงฟิล์ม Pochong Film】",
-        "poster": "https://img.youtube.com/vi/KRWTpds-YJk/hqdefault.jpg",
-        "duration": "1:57:23",
+        "id": "yt-yt-JESdnr2lmy4",
+        "title": "เพชรภูเรือ (2527) - สรพงศ์ ชาตรี หนังไทยเก่า เต็มเรื่อง【โพชงฟิล์ม Pochong Film】",
+        "poster": "https://img.youtube.com/vi/JESdnr2lmy4/hqdefault.jpg",
+        "duration": "1:40:56",
         "starting_price": "ดูฟรี 0 บ.",
         "categories": [
           "หนังไทย",
@@ -1013,30 +875,7 @@
         "sources": [
           {
             "label": "▶ ดูฟรีบน YouTube",
-            "url": "https://www.youtube.com/watch?v=yt-KRWTpds-YJk",
-            "class": "btn-youtube"
-          }
-        ]
-      },
-      {
-        "id": "yt-yt-kXOPpmAUVZE",
-        "title": "หนังไทย เต็มเรื่อง 5 สาวผ่านรก (2533) - บิณฑ์ บันลือฤทธิ์ - (Classic Film)",
-        "poster": "https://img.youtube.com/vi/kXOPpmAUVZE/hqdefault.jpg",
-        "duration": "1:06:21",
-        "starting_price": "ดูฟรี 0 บ.",
-        "categories": [
-          "หนังไทย",
-          "ดูฟรี",
-          "YouTube"
-        ],
-        "specs": {
-          "resolution": "1080p / 720p HD",
-          "audio": "พากย์ไทย"
-        },
-        "sources": [
-          {
-            "label": "▶ ดูฟรีบน YouTube",
-            "url": "https://www.youtube.com/watch?v=yt-kXOPpmAUVZE",
+            "url": "https://www.youtube.com/watch?v=yt-JESdnr2lmy4",
             "class": "btn-youtube"
           }
         ]
@@ -1065,98 +904,6 @@
         ]
       },
       {
-        "id": "yt-yt-7XGyA_CN92k",
-        "title": "Live l แห่ซิ่งวิ่งลุย ดิจิตอล  l หนังไทยคลาสสิก l Boomerangshops",
-        "poster": "https://img.youtube.com/vi/7XGyA_CN92k/hqdefault.jpg",
-        "duration": "1:39:45",
-        "starting_price": "ดูฟรี 0 บ.",
-        "categories": [
-          "หนังไทย",
-          "ดูฟรี",
-          "YouTube"
-        ],
-        "specs": {
-          "resolution": "1080p / 720p HD",
-          "audio": "พากย์ไทย"
-        },
-        "sources": [
-          {
-            "label": "▶ ดูฟรีบน YouTube",
-            "url": "https://www.youtube.com/watch?v=yt-7XGyA_CN92k",
-            "class": "btn-youtube"
-          }
-        ]
-      },
-      {
-        "id": "yt-yt-MEtL8SVI2-M",
-        "title": "ปล้นลอยฟ้า (2528) - สรพงษ์ ชาตรี หนังไทยเก่า เต็มเรื่อง【โพชงฟิล์ม Pochong Film】",
-        "poster": "https://img.youtube.com/vi/MEtL8SVI2-M/hqdefault.jpg",
-        "duration": "1:42:50",
-        "starting_price": "ดูฟรี 0 บ.",
-        "categories": [
-          "หนังไทย",
-          "ดูฟรี",
-          "YouTube"
-        ],
-        "specs": {
-          "resolution": "1080p / 720p HD",
-          "audio": "พากย์ไทย"
-        },
-        "sources": [
-          {
-            "label": "▶ ดูฟรีบน YouTube",
-            "url": "https://www.youtube.com/watch?v=yt-MEtL8SVI2-M",
-            "class": "btn-youtube"
-          }
-        ]
-      },
-      {
-        "id": "yt-yt-Wp16cLO-YIM",
-        "title": "เจ้าพ่อทรหด (2535) - สรพงษ์ ชาตรี หนังไทยเก่า เต็มเรื่อง【โพชงฟิล์ม Pochong Film】",
-        "poster": "https://img.youtube.com/vi/Wp16cLO-YIM/hqdefault.jpg",
-        "duration": "1:22:16",
-        "starting_price": "ดูฟรี 0 บ.",
-        "categories": [
-          "หนังไทย",
-          "ดูฟรี",
-          "YouTube"
-        ],
-        "specs": {
-          "resolution": "1080p / 720p HD",
-          "audio": "พากย์ไทย"
-        },
-        "sources": [
-          {
-            "label": "▶ ดูฟรีบน YouTube",
-            "url": "https://www.youtube.com/watch?v=yt-Wp16cLO-YIM",
-            "class": "btn-youtube"
-          }
-        ]
-      },
-      {
-        "id": "yt-yt-SaYkXVbQHx0",
-        "title": "เสาร์ 5 (2519) - หนังไทยเก่า เต็มเรื่อง【โพชงฟิล์ม Pochong Film】",
-        "poster": "https://img.youtube.com/vi/SaYkXVbQHx0/hqdefault.jpg",
-        "duration": "2:03:03",
-        "starting_price": "ดูฟรี 0 บ.",
-        "categories": [
-          "หนังไทย",
-          "ดูฟรี",
-          "YouTube"
-        ],
-        "specs": {
-          "resolution": "1080p / 720p HD",
-          "audio": "พากย์ไทย"
-        },
-        "sources": [
-          {
-            "label": "▶ ดูฟรีบน YouTube",
-            "url": "https://www.youtube.com/watch?v=yt-SaYkXVbQHx0",
-            "class": "btn-youtube"
-          }
-        ]
-      },
-      {
         "id": "yt-yt-zZQirq5hAwc",
         "title": "วัลลี (2528) - หนังไทยเก่า เต็มเรื่อง【โพชงฟิล์ม Pochong Film】",
         "poster": "https://img.youtube.com/vi/zZQirq5hAwc/hqdefault.jpg",
@@ -1180,10 +927,10 @@
         ]
       },
       {
-        "id": "yt-yt-B0tTNiG8iik",
-        "title": "มัน (2518) - สมบัติ เมทะนี , นาท ภูวนัย หนังไทยเก่า เต็มเรื่อง【โพชงฟิล์ม Pochong Film】",
-        "poster": "https://img.youtube.com/vi/B0tTNiG8iik/hqdefault.jpg",
-        "duration": "2:12:08",
+        "id": "yt-yt-BplBf96qZG0",
+        "title": "หนังไทย เต็มเรื่อง ยิงทิ้ง (2529) - สรพงศ์ ชาตรี - (Classic Film)",
+        "poster": "https://img.youtube.com/vi/BplBf96qZG0/hqdefault.jpg",
+        "duration": "1:20:52",
         "starting_price": "ดูฟรี 0 บ.",
         "categories": [
           "หนังไทย",
@@ -1197,30 +944,7 @@
         "sources": [
           {
             "label": "▶ ดูฟรีบน YouTube",
-            "url": "https://www.youtube.com/watch?v=yt-B0tTNiG8iik",
-            "class": "btn-youtube"
-          }
-        ]
-      },
-      {
-        "id": "yt-yt--Btw3L27qng",
-        "title": "ทุ่งลุยลาย(ชุมแพ ภาค 2)[2521] | Thai Movie 1978",
-        "poster": "https://img.youtube.com/vi/-Btw3L27qng/hqdefault.jpg",
-        "duration": "1:50:05",
-        "starting_price": "ดูฟรี 0 บ.",
-        "categories": [
-          "หนังไทย",
-          "ดูฟรี",
-          "YouTube"
-        ],
-        "specs": {
-          "resolution": "1080p / 720p HD",
-          "audio": "พากย์ไทย"
-        },
-        "sources": [
-          {
-            "label": "▶ ดูฟรีบน YouTube",
-            "url": "https://www.youtube.com/watch?v=yt--Btw3L27qng",
+            "url": "https://www.youtube.com/watch?v=yt-BplBf96qZG0",
             "class": "btn-youtube"
           }
         ]
@@ -1249,10 +973,10 @@
         ]
       },
       {
-        "id": "yt-yt-eIvq8YAonrY",
-        "title": "สารวัตรเถื่อน (2530) - หนังไทยเก่า เต็มเรื่อง【โพชงฟิล์ม Pochong Film】",
-        "poster": "https://img.youtube.com/vi/eIvq8YAonrY/hqdefault.jpg",
-        "duration": "1:32:33",
+        "id": "yt-yt-MEtL8SVI2-M",
+        "title": "ปล้นลอยฟ้า (2528) - สรพงษ์ ชาตรี หนังไทยเก่า เต็มเรื่อง【โพชงฟิล์ม Pochong Film】",
+        "poster": "https://img.youtube.com/vi/MEtL8SVI2-M/hqdefault.jpg",
+        "duration": "1:42:50",
         "starting_price": "ดูฟรี 0 บ.",
         "categories": [
           "หนังไทย",
@@ -1266,7 +990,76 @@
         "sources": [
           {
             "label": "▶ ดูฟรีบน YouTube",
-            "url": "https://www.youtube.com/watch?v=yt-eIvq8YAonrY",
+            "url": "https://www.youtube.com/watch?v=yt-MEtL8SVI2-M",
+            "class": "btn-youtube"
+          }
+        ]
+      },
+      {
+        "id": "yt-yt--Btw3L27qng",
+        "title": "ทุ่งลุยลาย(ชุมแพ ภาค 2)[2521] | Thai Movie 1978",
+        "poster": "https://img.youtube.com/vi/-Btw3L27qng/hqdefault.jpg",
+        "duration": "1:50:05",
+        "starting_price": "ดูฟรี 0 บ.",
+        "categories": [
+          "หนังไทย",
+          "ดูฟรี",
+          "YouTube"
+        ],
+        "specs": {
+          "resolution": "1080p / 720p HD",
+          "audio": "พากย์ไทย"
+        },
+        "sources": [
+          {
+            "label": "▶ ดูฟรีบน YouTube",
+            "url": "https://www.youtube.com/watch?v=yt--Btw3L27qng",
+            "class": "btn-youtube"
+          }
+        ]
+      },
+      {
+        "id": "yt-yt-ZqA5sgRWRh4",
+        "title": "สยามสแควร์ (2527) - หนังไทยเก่า เต็มเรื่อง【โพชงฟิล์ม Pochong Film】",
+        "poster": "https://img.youtube.com/vi/ZqA5sgRWRh4/hqdefault.jpg",
+        "duration": "1:42:09",
+        "starting_price": "ดูฟรี 0 บ.",
+        "categories": [
+          "หนังไทย",
+          "ดูฟรี",
+          "YouTube"
+        ],
+        "specs": {
+          "resolution": "1080p / 720p HD",
+          "audio": "พากย์ไทย"
+        },
+        "sources": [
+          {
+            "label": "▶ ดูฟรีบน YouTube",
+            "url": "https://www.youtube.com/watch?v=yt-ZqA5sgRWRh4",
+            "class": "btn-youtube"
+          }
+        ]
+      },
+      {
+        "id": "yt-yt-yRI4BOFlx8E",
+        "title": "ฟ้าทลายโจร (2532)  - สรพงษ์ ชาตรี หนังไทยเก่า เต็มเรื่อง【โพชงฟิล์ม Pochong Film】",
+        "poster": "https://img.youtube.com/vi/yRI4BOFlx8E/hqdefault.jpg",
+        "duration": "1:31:07",
+        "starting_price": "ดูฟรี 0 บ.",
+        "categories": [
+          "หนังไทย",
+          "ดูฟรี",
+          "YouTube"
+        ],
+        "specs": {
+          "resolution": "1080p / 720p HD",
+          "audio": "พากย์ไทย"
+        },
+        "sources": [
+          {
+            "label": "▶ ดูฟรีบน YouTube",
+            "url": "https://www.youtube.com/watch?v=yt-yRI4BOFlx8E",
             "class": "btn-youtube"
           }
         ]
@@ -1316,14 +1109,83 @@
             "class": "btn-youtube"
           }
         ]
+      },
+      {
+        "id": "yt-yt-SaYkXVbQHx0",
+        "title": "เสาร์ 5 (2519) - หนังไทยเก่า เต็มเรื่อง【โพชงฟิล์ม Pochong Film】",
+        "poster": "https://img.youtube.com/vi/SaYkXVbQHx0/hqdefault.jpg",
+        "duration": "2:03:03",
+        "starting_price": "ดูฟรี 0 บ.",
+        "categories": [
+          "หนังไทย",
+          "ดูฟรี",
+          "YouTube"
+        ],
+        "specs": {
+          "resolution": "1080p / 720p HD",
+          "audio": "พากย์ไทย"
+        },
+        "sources": [
+          {
+            "label": "▶ ดูฟรีบน YouTube",
+            "url": "https://www.youtube.com/watch?v=yt-SaYkXVbQHx0",
+            "class": "btn-youtube"
+          }
+        ]
+      },
+      {
+        "id": "yt-yt-fS7b7q3AbUU",
+        "title": "นวลฉวี (2528) - หนังไทยเก่า เต็มเรื่อง【โพชงฟิล์ม Pochong Film】",
+        "poster": "https://img.youtube.com/vi/fS7b7q3AbUU/hqdefault.jpg",
+        "duration": "1:53:07",
+        "starting_price": "ดูฟรี 0 บ.",
+        "categories": [
+          "หนังไทย",
+          "ดูฟรี",
+          "YouTube"
+        ],
+        "specs": {
+          "resolution": "1080p / 720p HD",
+          "audio": "พากย์ไทย"
+        },
+        "sources": [
+          {
+            "label": "▶ ดูฟรีบน YouTube",
+            "url": "https://www.youtube.com/watch?v=yt-fS7b7q3AbUU",
+            "class": "btn-youtube"
+          }
+        ]
+      },
+      {
+        "id": "yt-yt-tsB4JrCncqQ",
+        "title": "สิงห์รถบรรทุก 2 (2527) - สรพงศ์ ชาตรี หนังไทยเก่า เต็มเรื่อง【โพชงฟิล์ม Pochong Film】",
+        "poster": "https://img.youtube.com/vi/tsB4JrCncqQ/hqdefault.jpg",
+        "duration": "1:38:37",
+        "starting_price": "ดูฟรี 0 บ.",
+        "categories": [
+          "หนังไทย",
+          "ดูฟรี",
+          "YouTube"
+        ],
+        "specs": {
+          "resolution": "1080p / 720p HD",
+          "audio": "พากย์ไทย"
+        },
+        "sources": [
+          {
+            "label": "▶ ดูฟรีบน YouTube",
+            "url": "https://www.youtube.com/watch?v=yt-tsB4JrCncqQ",
+            "class": "btn-youtube"
+          }
+        ]
       }
     ],
     "หนังสงคราม": [
       {
-        "id": "yt-yt-0D-Tuiou4ZI",
-        "title": "พากย์ไทย | นางฟ้าเลือดร้อน Hot Blooded Angel | แอ็กชั่น / อาชญากรรม | iQIYI Movie Thai",
-        "poster": "https://img.youtube.com/vi/0D-Tuiou4ZI/hqdefault.jpg",
-        "duration": "1:10:47",
+        "id": "yt-yt-SgFx-xWKDSU",
+        "title": "【พากย์ไทย🔥】เจสัน สเตแธม มือสไนเปอร์พระกาฬ ยิงไม่เคยพลาด!💥 ลุยเดี่ยวกวาดล้างแก๊งก่อการร้ายจนสิ้นซาก!",
+        "poster": "https://img.youtube.com/vi/SgFx-xWKDSU/hqdefault.jpg",
+        "duration": "1:18:56",
         "starting_price": "ดูฟรี 0 บ.",
         "categories": [
           "หนังสงคราม",
@@ -1337,16 +1199,16 @@
         "sources": [
           {
             "label": "▶ ดูฟรีบน YouTube",
-            "url": "https://www.youtube.com/watch?v=yt-0D-Tuiou4ZI",
+            "url": "https://www.youtube.com/watch?v=yt-SgFx-xWKDSU",
             "class": "btn-youtube"
           }
         ]
       },
       {
-        "id": "yt-yt-FBmhb4llUXE",
-        "title": "พากย์ไทย | สมรภูมิเลือดแม่น้ําไร้นาม RAID​​​ | แอ็กชั่น / สงคราม",
-        "poster": "https://img.youtube.com/vi/FBmhb4llUXE/hqdefault.jpg",
-        "duration": "1:36:32",
+        "id": "yt-yt-XGescgSFVzQ",
+        "title": "【พากย์ไทย】มหันตภัยฉลามยักษ์ถล่มมหาสมุทร! ขย้ำเรือเหล็กพังยับเยิน สาดเลือดสดเขมือบคนกลางทะเลเดือด🦈🚢💥",
+        "poster": "https://img.youtube.com/vi/XGescgSFVzQ/hqdefault.jpg",
+        "duration": "1:15:35",
         "starting_price": "ดูฟรี 0 บ.",
         "categories": [
           "หนังสงคราม",
@@ -1360,16 +1222,16 @@
         "sources": [
           {
             "label": "▶ ดูฟรีบน YouTube",
-            "url": "https://www.youtube.com/watch?v=yt-FBmhb4llUXE",
+            "url": "https://www.youtube.com/watch?v=yt-XGescgSFVzQ",
             "class": "btn-youtube"
           }
         ]
       },
       {
-        "id": "yt-yt-TwK99WhOSZ0",
-        "title": "【พากย์ไทย】สงครามนินจาปะทุ! เด็กหนุ่มปลุกพลังต้องห้าม ล้างแค้นมนุษย์กลายพันธุ์!",
-        "poster": "https://img.youtube.com/vi/TwK99WhOSZ0/hqdefault.jpg",
-        "duration": "1:11:18",
+        "id": "yt-yt-StNgKzwwdZ4",
+        "title": "【พากย์ไทย】เทพสังหารคืนชีพ! นักฆ่ามือหนึ่งเปิดศึกถล่มมาเฟีย ช่วยน้องสาวให้รอด!",
+        "poster": "https://img.youtube.com/vi/StNgKzwwdZ4/hqdefault.jpg",
+        "duration": "1:36:16",
         "starting_price": "ดูฟรี 0 บ.",
         "categories": [
           "หนังสงคราม",
@@ -1383,214 +1245,7 @@
         "sources": [
           {
             "label": "▶ ดูฟรีบน YouTube",
-            "url": "https://www.youtube.com/watch?v=yt-TwK99WhOSZ0",
-            "class": "btn-youtube"
-          }
-        ]
-      },
-      {
-        "id": "yt-yt-TUkyY61kUOc",
-        "title": "【พากย์ไทย】ครอบครัวถูกฆ่า! พ่อค้าอาวุธติดอาวุธบุกถล่มฐานผู้ก่อการร้าย ล้างแค้นเลือด!",
-        "poster": "https://img.youtube.com/vi/TUkyY61kUOc/hqdefault.jpg",
-        "duration": "1:19:24",
-        "starting_price": "ดูฟรี 0 บ.",
-        "categories": [
-          "หนังสงคราม",
-          "ดูฟรี",
-          "YouTube"
-        ],
-        "specs": {
-          "resolution": "1080p / 720p HD",
-          "audio": "พากย์ไทย"
-        },
-        "sources": [
-          {
-            "label": "▶ ดูฟรีบน YouTube",
-            "url": "https://www.youtube.com/watch?v=yt-TUkyY61kUOc",
-            "class": "btn-youtube"
-          }
-        ]
-      },
-      {
-        "id": "yt-yt-TqH_ATjmf9I",
-        "title": "พากย์ไทย | พายุฤดูแค้น Firestorm | แอ็กชั่น / อาชญากรรม | iQIYI Movie Thai",
-        "poster": "https://img.youtube.com/vi/TqH_ATjmf9I/hqdefault.jpg",
-        "duration": "1:19:15",
-        "starting_price": "ดูฟรี 0 บ.",
-        "categories": [
-          "หนังสงคราม",
-          "ดูฟรี",
-          "YouTube"
-        ],
-        "specs": {
-          "resolution": "1080p / 720p HD",
-          "audio": "พากย์ไทย"
-        },
-        "sources": [
-          {
-            "label": "▶ ดูฟรีบน YouTube",
-            "url": "https://www.youtube.com/watch?v=yt-TqH_ATjmf9I",
-            "class": "btn-youtube"
-          }
-        ]
-      },
-      {
-        "id": "yt-yt-lDICFWG8vsQ",
-        "title": "พากย์ไทย | ซุ่มยิงมรณะ Deadly Sniper | หนังสงคราม | iQIYI Movie Thai",
-        "poster": "https://img.youtube.com/vi/lDICFWG8vsQ/hqdefault.jpg",
-        "duration": "1:27:23",
-        "starting_price": "ดูฟรี 0 บ.",
-        "categories": [
-          "หนังสงคราม",
-          "ดูฟรี",
-          "YouTube"
-        ],
-        "specs": {
-          "resolution": "1080p / 720p HD",
-          "audio": "พากย์ไทย"
-        },
-        "sources": [
-          {
-            "label": "▶ ดูฟรีบน YouTube",
-            "url": "https://www.youtube.com/watch?v=yt-lDICFWG8vsQ",
-            "class": "btn-youtube"
-          }
-        ]
-      },
-      {
-        "id": "yt-yt-tdryXw3_rrE",
-        "title": "【พากย์ไทย】แมลงยักษ์บุกเมือง! กินคนถล่มเมือง หน่วยรบพิเศษเปิดศึกโต้กลับ!",
-        "poster": "https://img.youtube.com/vi/tdryXw3_rrE/hqdefault.jpg",
-        "duration": "1:04:41",
-        "starting_price": "ดูฟรี 0 บ.",
-        "categories": [
-          "หนังสงคราม",
-          "ดูฟรี",
-          "YouTube"
-        ],
-        "specs": {
-          "resolution": "1080p / 720p HD",
-          "audio": "พากย์ไทย"
-        },
-        "sources": [
-          {
-            "label": "▶ ดูฟรีบน YouTube",
-            "url": "https://www.youtube.com/watch?v=yt-tdryXw3_rrE",
-            "class": "btn-youtube"
-          }
-        ]
-      },
-      {
-        "id": "yt-yt-1NiEfw9b8qw",
-        "title": "💥หนุ่มยุคใหม่ทะลุมิติเป็นชาวบ้านยุคจั๋นกั๋ว! หนี้ท่วมหัว ใช้ปัญญาขงจื๊อกับวิชาทำเกลือพลิกชีวิต!",
-        "poster": "https://img.youtube.com/vi/1NiEfw9b8qw/hqdefault.jpg",
-        "duration": "2:33:57",
-        "starting_price": "ดูฟรี 0 บ.",
-        "categories": [
-          "หนังสงคราม",
-          "ดูฟรี",
-          "YouTube"
-        ],
-        "specs": {
-          "resolution": "1080p / 720p HD",
-          "audio": "พากย์ไทย"
-        },
-        "sources": [
-          {
-            "label": "▶ ดูฟรีบน YouTube",
-            "url": "https://www.youtube.com/watch?v=yt-1NiEfw9b8qw",
-            "class": "btn-youtube"
-          }
-        ]
-      },
-      {
-        "id": "yt-yt-T3gba6mhBxw",
-        "title": "【พากย์ไทย】หน่วยปฏิบัติการพิเศษซุ่มโจมตีผู้ก่อการร้ายเพื่อช่วยลูกประกัน การยิงปะทะบนทางด่วนระเบิด!",
-        "poster": "https://img.youtube.com/vi/T3gba6mhBxw/hqdefault.jpg",
-        "duration": "1:00:43",
-        "starting_price": "ดูฟรี 0 บ.",
-        "categories": [
-          "หนังสงคราม",
-          "ดูฟรี",
-          "YouTube"
-        ],
-        "specs": {
-          "resolution": "1080p / 720p HD",
-          "audio": "พากย์ไทย"
-        },
-        "sources": [
-          {
-            "label": "▶ ดูฟรีบน YouTube",
-            "url": "https://www.youtube.com/watch?v=yt-T3gba6mhBxw",
-            "class": "btn-youtube"
-          }
-        ]
-      },
-      {
-        "id": "yt-yt-06KBzNaEo-I",
-        "title": "พากย์ไทย | พายุฤดูแค้น Firestorm | แอ็กชั่น / อาชญากรรม | iQIYI Movie Thai",
-        "poster": "https://img.youtube.com/vi/06KBzNaEo-I/hqdefault.jpg",
-        "duration": "1:19:44",
-        "starting_price": "ดูฟรี 0 บ.",
-        "categories": [
-          "หนังสงคราม",
-          "ดูฟรี",
-          "YouTube"
-        ],
-        "specs": {
-          "resolution": "1080p / 720p HD",
-          "audio": "พากย์ไทย"
-        },
-        "sources": [
-          {
-            "label": "▶ ดูฟรีบน YouTube",
-            "url": "https://www.youtube.com/watch?v=yt-06KBzNaEo-I",
-            "class": "btn-youtube"
-          }
-        ]
-      },
-      {
-        "id": "yt-yt-9_lu4sXlDs4",
-        "title": "【พากย์ไทย】ศึกเดือดกลางป่า! หน่วยรบพิเศษบุกถล่มฐานก่อการร้าย ช่วยตัวประกัน กวาดล้างศัตรูหมดสิ้น!",
-        "poster": "https://img.youtube.com/vi/9_lu4sXlDs4/hqdefault.jpg",
-        "duration": "1:25:29",
-        "starting_price": "ดูฟรี 0 บ.",
-        "categories": [
-          "หนังสงคราม",
-          "ดูฟรี",
-          "YouTube"
-        ],
-        "specs": {
-          "resolution": "1080p / 720p HD",
-          "audio": "พากย์ไทย"
-        },
-        "sources": [
-          {
-            "label": "▶ ดูฟรีบน YouTube",
-            "url": "https://www.youtube.com/watch?v=yt-9_lu4sXlDs4",
-            "class": "btn-youtube"
-          }
-        ]
-      },
-      {
-        "id": "yt-yt-QRmWXBIOCQo",
-        "title": "หนังใหม่ 2022 HD​​ ★ดูหนังชนโรง★พากย์ไทย​ ตรงปกพาก​ย์ไทย",
-        "poster": "https://img.youtube.com/vi/QRmWXBIOCQo/hqdefault.jpg",
-        "duration": "1:41:28",
-        "starting_price": "ดูฟรี 0 บ.",
-        "categories": [
-          "หนังสงคราม",
-          "ดูฟรี",
-          "YouTube"
-        ],
-        "specs": {
-          "resolution": "1080p / 720p HD",
-          "audio": "พากย์ไทย"
-        },
-        "sources": [
-          {
-            "label": "▶ ดูฟรีบน YouTube",
-            "url": "https://www.youtube.com/watch?v=yt-QRmWXBIOCQo",
+            "url": "https://www.youtube.com/watch?v=yt-StNgKzwwdZ4",
             "class": "btn-youtube"
           }
         ]
@@ -1619,10 +1274,10 @@
         ]
       },
       {
-        "id": "yt-yt-eZ1mv9ssj_k",
-        "title": "ขอทานช่วยหญิงสาวโดนรังแก ตบทีเดียวมาเฟียร่วงทั้งแก๊ง ที่แท้คือหมอเทพสงครามซ่อนตัว！",
-        "poster": "https://img.youtube.com/vi/eZ1mv9ssj_k/hqdefault.jpg",
-        "duration": "2:17:53",
+        "id": "yt-yt-di3eOrjza7Y",
+        "title": "พากย์ไทย🎥พลซุ่มยิง| เจสัน สเตแธม คือพลซุ่มยิงระดับพระกาฬ! ยิงแม่นทุกนัด กวาดผู้ก่อการร้ายทั้งแก๊ง 💥",
+        "poster": "https://img.youtube.com/vi/di3eOrjza7Y/hqdefault.jpg",
+        "duration": "1:18:56",
         "starting_price": "ดูฟรี 0 บ.",
         "categories": [
           "หนังสงคราม",
@@ -1636,16 +1291,16 @@
         "sources": [
           {
             "label": "▶ ดูฟรีบน YouTube",
-            "url": "https://www.youtube.com/watch?v=yt-eZ1mv9ssj_k",
+            "url": "https://www.youtube.com/watch?v=yt-di3eOrjza7Y",
             "class": "btn-youtube"
           }
         ]
       },
       {
-        "id": "yt-yt-BsnH47rBNGw",
-        "title": "หนังใหม่ ตรงปก หนังสงคราม หนังแอ็คชั่นมันๆ พากย์ไทย HD",
-        "poster": "https://img.youtube.com/vi/BsnH47rBNGw/hqdefault.jpg",
-        "duration": "1:33:35",
+        "id": "yt-yt-RWs4l-InocE",
+        "title": "หนังใหม่2025เต็มเรื่อง พากย์ไทยชนโรง (Act of Valor) หน่วยพิฆาต ระห่ำกู้โลก",
+        "poster": "https://img.youtube.com/vi/RWs4l-InocE/hqdefault.jpg",
+        "duration": "1:50:17",
         "starting_price": "ดูฟรี 0 บ.",
         "categories": [
           "หนังสงคราม",
@@ -1659,16 +1314,16 @@
         "sources": [
           {
             "label": "▶ ดูฟรีบน YouTube",
-            "url": "https://www.youtube.com/watch?v=yt-BsnH47rBNGw",
+            "url": "https://www.youtube.com/watch?v=yt-RWs4l-InocE",
             "class": "btn-youtube"
           }
         ]
       },
       {
-        "id": "yt-yt-A27YbWPjqEE",
-        "title": "เต็มเรื่อง ★ธนูพิฆาต★New Release War Action Dubbed Hindi Movie",
-        "poster": "https://img.youtube.com/vi/A27YbWPjqEE/hqdefault.jpg",
-        "duration": "2:02:14",
+        "id": "yt-yt-9NWJXXJRCso",
+        "title": "【พากย์ไทย】ผู้ก่อการร้ายบุกหมู่บ้าน หน่วยรบพิเศษรวมพลเร็ว กวาดล้างสิ้น!",
+        "poster": "https://img.youtube.com/vi/9NWJXXJRCso/hqdefault.jpg",
+        "duration": "1:22:17",
         "starting_price": "ดูฟรี 0 บ.",
         "categories": [
           "หนังสงคราม",
@@ -1682,16 +1337,16 @@
         "sources": [
           {
             "label": "▶ ดูฟรีบน YouTube",
-            "url": "https://www.youtube.com/watch?v=yt-A27YbWPjqEE",
+            "url": "https://www.youtube.com/watch?v=yt-9NWJXXJRCso",
             "class": "btn-youtube"
           }
         ]
       },
       {
-        "id": "yt-yt-TrAjNI5xFtE",
-        "title": "เทพสงครามโดนเมียทิ้งออกจากคุก เห็นสาวสวยโดนรังแก ใช้เวลาแค่ 3 วิก็จัดการพวกมันราบ!",
-        "poster": "https://img.youtube.com/vi/TrAjNI5xFtE/hqdefault.jpg",
-        "duration": "2:12:26",
+        "id": "yt-yt-H5oH_77uJeA",
+        "title": "【พากย์ไทย】สไนเปอร์ขั้นเทพ! สอยร่วงศัตรู 100 คนคนเดียวทั้งสนามรบ!💥🔥",
+        "poster": "https://img.youtube.com/vi/H5oH_77uJeA/hqdefault.jpg",
+        "duration": "1:24:58",
         "starting_price": "ดูฟรี 0 บ.",
         "categories": [
           "หนังสงคราม",
@@ -1705,13 +1360,243 @@
         "sources": [
           {
             "label": "▶ ดูฟรีบน YouTube",
-            "url": "https://www.youtube.com/watch?v=yt-TrAjNI5xFtE",
+            "url": "https://www.youtube.com/watch?v=yt-H5oH_77uJeA",
+            "class": "btn-youtube"
+          }
+        ]
+      },
+      {
+        "id": "yt-yt-l2_4DIQCcLs",
+        "title": "พากย์ไทย🎥Break Through| 💥อดีตทหารลับบุกเดี่ยว ลุยดงกระสุนถล่มแก๊งศัตรูพินาศ🔥",
+        "poster": "https://img.youtube.com/vi/l2_4DIQCcLs/hqdefault.jpg",
+        "duration": "1:20:37",
+        "starting_price": "ดูฟรี 0 บ.",
+        "categories": [
+          "หนังสงคราม",
+          "ดูฟรี",
+          "YouTube"
+        ],
+        "specs": {
+          "resolution": "1080p / 720p HD",
+          "audio": "พากย์ไทย"
+        },
+        "sources": [
+          {
+            "label": "▶ ดูฟรีบน YouTube",
+            "url": "https://www.youtube.com/watch?v=yt-l2_4DIQCcLs",
+            "class": "btn-youtube"
+          }
+        ]
+      },
+      {
+        "id": "yt-yt-C9XcGzsBxcI",
+        "title": "หนังพากย์ไทยเต็มเรื่อง |ระเบิดสงครามมือปืน กับการไล่ล่าที่ใช้ชีวิตเป็นเดิมพัน! 🔥| หนังจีน2026",
+        "poster": "https://img.youtube.com/vi/C9XcGzsBxcI/hqdefault.jpg",
+        "duration": "1:18:47",
+        "starting_price": "ดูฟรี 0 บ.",
+        "categories": [
+          "หนังสงคราม",
+          "ดูฟรี",
+          "YouTube"
+        ],
+        "specs": {
+          "resolution": "1080p / 720p HD",
+          "audio": "พากย์ไทย"
+        },
+        "sources": [
+          {
+            "label": "▶ ดูฟรีบน YouTube",
+            "url": "https://www.youtube.com/watch?v=yt-C9XcGzsBxcI",
+            "class": "btn-youtube"
+          }
+        ]
+      },
+      {
+        "id": "yt-yt-FBmhb4llUXE",
+        "title": "พากย์ไทย | สมรภูมิเลือดแม่น้ําไร้นาม RAID​​​ | แอ็กชั่น / สงคราม",
+        "poster": "https://img.youtube.com/vi/FBmhb4llUXE/hqdefault.jpg",
+        "duration": "1:36:32",
+        "starting_price": "ดูฟรี 0 บ.",
+        "categories": [
+          "หนังสงคราม",
+          "ดูฟรี",
+          "YouTube"
+        ],
+        "specs": {
+          "resolution": "1080p / 720p HD",
+          "audio": "พากย์ไทย"
+        },
+        "sources": [
+          {
+            "label": "▶ ดูฟรีบน YouTube",
+            "url": "https://www.youtube.com/watch?v=yt-FBmhb4llUXE",
+            "class": "btn-youtube"
+          }
+        ]
+      },
+      {
+        "id": "yt-yt-XD40z7dRg2I",
+        "title": "【พากย์ไทย】ถูกฝึกให้เป็นนักฆ่า ก่อนหลบหนีออกมาและเปิดฉากการล้างแค้นสุดเดือด!",
+        "poster": "https://img.youtube.com/vi/XD40z7dRg2I/hqdefault.jpg",
+        "duration": "2:00:18",
+        "starting_price": "ดูฟรี 0 บ.",
+        "categories": [
+          "หนังสงคราม",
+          "ดูฟรี",
+          "YouTube"
+        ],
+        "specs": {
+          "resolution": "1080p / 720p HD",
+          "audio": "พากย์ไทย"
+        },
+        "sources": [
+          {
+            "label": "▶ ดูฟรีบน YouTube",
+            "url": "https://www.youtube.com/watch?v=yt-XD40z7dRg2I",
+            "class": "btn-youtube"
+          }
+        ]
+      },
+      {
+        "id": "yt-yt--YkunwGUNaQ",
+        "title": "【พากย์ไทย】ฝ่าห่ากระสุนนรก! ศัตรูปูพรมถล่ม กองกำลังอาสาปักหลักสู้ขาดใจ",
+        "poster": "https://img.youtube.com/vi/-YkunwGUNaQ/hqdefault.jpg",
+        "duration": "2:48:45",
+        "starting_price": "ดูฟรี 0 บ.",
+        "categories": [
+          "หนังสงคราม",
+          "ดูฟรี",
+          "YouTube"
+        ],
+        "specs": {
+          "resolution": "1080p / 720p HD",
+          "audio": "พากย์ไทย"
+        },
+        "sources": [
+          {
+            "label": "▶ ดูฟรีบน YouTube",
+            "url": "https://www.youtube.com/watch?v=yt--YkunwGUNaQ",
+            "class": "btn-youtube"
+          }
+        ]
+      },
+      {
+        "id": "yt-yt-U9TSYMO2r1Q",
+        "title": "【พากย์ไทย】เทพสังหารถูกขัง 30 ปี! หวนคืนยุทธภพ กวาดล้างยอดฝีมือทั่วหล้า!",
+        "poster": "https://img.youtube.com/vi/U9TSYMO2r1Q/hqdefault.jpg",
+        "duration": "1:24:15",
+        "starting_price": "ดูฟรี 0 บ.",
+        "categories": [
+          "หนังสงคราม",
+          "ดูฟรี",
+          "YouTube"
+        ],
+        "specs": {
+          "resolution": "1080p / 720p HD",
+          "audio": "พากย์ไทย"
+        },
+        "sources": [
+          {
+            "label": "▶ ดูฟรีบน YouTube",
+            "url": "https://www.youtube.com/watch?v=yt-U9TSYMO2r1Q",
+            "class": "btn-youtube"
+          }
+        ]
+      },
+      {
+        "id": "yt-yt-hYrDFoK8zyA",
+        "title": "【พากย์ไทย】ผู้ก่อการร้ายบุกโจมตีหมู่บ้านชายแดน! หน่วยรบพิเศษเร่งเข้าช่วยเหลือตัวประกันทันที!",
+        "poster": "https://img.youtube.com/vi/hYrDFoK8zyA/hqdefault.jpg",
+        "duration": "1:22:17",
+        "starting_price": "ดูฟรี 0 บ.",
+        "categories": [
+          "หนังสงคราม",
+          "ดูฟรี",
+          "YouTube"
+        ],
+        "specs": {
+          "resolution": "1080p / 720p HD",
+          "audio": "พากย์ไทย"
+        },
+        "sources": [
+          {
+            "label": "▶ ดูฟรีบน YouTube",
+            "url": "https://www.youtube.com/watch?v=yt-hYrDFoK8zyA",
+            "class": "btn-youtube"
+          }
+        ]
+      },
+      {
+        "id": "yt-yt-h_wpzSDjPKM",
+        "title": "【พากย์ไทย】สงครามสามเหลี่ยมทองคำ! หน่วยรบพิเศษบุกป่าช่วยเหลือพวกพ้องที่ถูกจับ!",
+        "poster": "https://img.youtube.com/vi/h_wpzSDjPKM/hqdefault.jpg",
+        "duration": "1:45:11",
+        "starting_price": "ดูฟรี 0 บ.",
+        "categories": [
+          "หนังสงคราม",
+          "ดูฟรี",
+          "YouTube"
+        ],
+        "specs": {
+          "resolution": "1080p / 720p HD",
+          "audio": "พากย์ไทย"
+        },
+        "sources": [
+          {
+            "label": "▶ ดูฟรีบน YouTube",
+            "url": "https://www.youtube.com/watch?v=yt-h_wpzSDjPKM",
+            "class": "btn-youtube"
+          }
+        ]
+      },
+      {
+        "id": "yt-yt-zd-HbnHAx-g",
+        "title": "【พากย์ไทย】หน่วยรบพิเศษเปิดภารกิจลับ บุกทำลายขบวนรถขีปนาวุธศัตรู!",
+        "poster": "https://img.youtube.com/vi/zd-HbnHAx-g/hqdefault.jpg",
+        "duration": "1:11:03",
+        "starting_price": "ดูฟรี 0 บ.",
+        "categories": [
+          "หนังสงคราม",
+          "ดูฟรี",
+          "YouTube"
+        ],
+        "specs": {
+          "resolution": "1080p / 720p HD",
+          "audio": "พากย์ไทย"
+        },
+        "sources": [
+          {
+            "label": "▶ ดูฟรีบน YouTube",
+            "url": "https://www.youtube.com/watch?v=yt-zd-HbnHAx-g",
             "class": "btn-youtube"
           }
         ]
       }
     ],
     "อนิเมะ": [
+      {
+        "id": "yt-yt-OPg3iE9ekMw",
+        "title": "[Thai Anime Tales]พากย์ไทย 💕ข้ามภพถูกเนรเทศทะเลทราย ใช้ระบบกระดานวาดAIสร้างสิ่งของ กลายเป็นเจ้าเมือง",
+        "poster": "https://img.youtube.com/vi/OPg3iE9ekMw/hqdefault.jpg",
+        "duration": "2:13:19",
+        "starting_price": "ดูฟรี 0 บ.",
+        "categories": [
+          "อนิเมะ",
+          "ดูฟรี",
+          "YouTube"
+        ],
+        "specs": {
+          "resolution": "1080p / 720p HD",
+          "audio": "พากย์ไทย"
+        },
+        "sources": [
+          {
+            "label": "▶ ดูฟรีบน YouTube",
+            "url": "https://www.youtube.com/watch?v=yt-OPg3iE9ekMw",
+            "class": "btn-youtube"
+          }
+        ]
+      },
       {
         "id": "yt-yt-ZJygEgEb-GQ",
         "title": "[Thai Anime Tales]พากย์ไทย 💕ระบบขยายผลหมื่นเท่า รถบรรทุกกลายเป็นป้อมเหล็กในโลกสิ้นสุด",
@@ -1759,10 +1644,10 @@
         ]
       },
       {
-        "id": "yt-yt-KQhvWIpBvFA",
-        "title": "หนังใหม่ 2025 เต็มเรื่อง พากย์ไทย ชนโรง ตำนานนักรบผู้พิทักษ์ดินแดนเวทมนตร์",
-        "poster": "https://img.youtube.com/vi/KQhvWIpBvFA/hqdefault.jpg",
-        "duration": "2:00:30",
+        "id": "yt-yt-l1TXuOhD0GY",
+        "title": "[พากย์ไทย] งูไร้ค่าวิวัฒน์ไม่หยุด | เกิดใหม่เป็นงู สายฟาร์มเลเวลไม่รู้จบ",
+        "poster": "https://img.youtube.com/vi/l1TXuOhD0GY/hqdefault.jpg",
+        "duration": "2:00:23",
         "starting_price": "ดูฟรี 0 บ.",
         "categories": [
           "อนิเมะ",
@@ -1776,16 +1661,16 @@
         "sources": [
           {
             "label": "▶ ดูฟรีบน YouTube",
-            "url": "https://www.youtube.com/watch?v=yt-KQhvWIpBvFA",
+            "url": "https://www.youtube.com/watch?v=yt-l1TXuOhD0GY",
             "class": "btn-youtube"
           }
         ]
       },
       {
-        "id": "yt-yt-SyXL7UTA9Ks",
-        "title": "โดเรม่อน รวมหลายตอนสนุกๆ 1 ชั่วโมงเต็ม พากย์ไทย [HD]",
-        "poster": "https://img.youtube.com/vi/SyXL7UTA9Ks/hqdefault.jpg",
-        "duration": "1:04:44",
+        "id": "yt-yt-XGescgSFVzQ",
+        "title": "【พากย์ไทย】มหันตภัยฉลามยักษ์ถล่มมหาสมุทร! ขย้ำเรือเหล็กพังยับเยิน สาดเลือดสดเขมือบคนกลางทะเลเดือด🦈🚢💥",
+        "poster": "https://img.youtube.com/vi/XGescgSFVzQ/hqdefault.jpg",
+        "duration": "1:15:35",
         "starting_price": "ดูฟรี 0 บ.",
         "categories": [
           "อนิเมะ",
@@ -1799,7 +1684,30 @@
         "sources": [
           {
             "label": "▶ ดูฟรีบน YouTube",
-            "url": "https://www.youtube.com/watch?v=yt-SyXL7UTA9Ks",
+            "url": "https://www.youtube.com/watch?v=yt-XGescgSFVzQ",
+            "class": "btn-youtube"
+          }
+        ]
+      },
+      {
+        "id": "yt-yt-MqTtAU8w1cY",
+        "title": "[Thai Anime Tales]พากย์ไทย 💕เด็กจนได้ระบบสุ่มบนเกาะ สุ่มได้คันตกปลาเทพ เลี้ยงสัตว์เลี้ยงพลิกชีวิต",
+        "poster": "https://img.youtube.com/vi/MqTtAU8w1cY/hqdefault.jpg",
+        "duration": "2:12:10",
+        "starting_price": "ดูฟรี 0 บ.",
+        "categories": [
+          "อนิเมะ",
+          "ดูฟรี",
+          "YouTube"
+        ],
+        "specs": {
+          "resolution": "1080p / 720p HD",
+          "audio": "พากย์ไทย"
+        },
+        "sources": [
+          {
+            "label": "▶ ดูฟรีบน YouTube",
+            "url": "https://www.youtube.com/watch?v=yt-MqTtAU8w1cY",
             "class": "btn-youtube"
           }
         ]
@@ -1828,52 +1736,6 @@
         ]
       },
       {
-        "id": "yt-yt-D6JEEmpLZXQ",
-        "title": "โดเรม่อน รวมหลายตอนสนุกๆ 1 ชั่วโมงเต็ม พากย์ไทย [HD]",
-        "poster": "https://img.youtube.com/vi/D6JEEmpLZXQ/hqdefault.jpg",
-        "duration": "1:05:55",
-        "starting_price": "ดูฟรี 0 บ.",
-        "categories": [
-          "อนิเมะ",
-          "ดูฟรี",
-          "YouTube"
-        ],
-        "specs": {
-          "resolution": "1080p / 720p HD",
-          "audio": "พากย์ไทย"
-        },
-        "sources": [
-          {
-            "label": "▶ ดูฟรีบน YouTube",
-            "url": "https://www.youtube.com/watch?v=yt-D6JEEmpLZXQ",
-            "class": "btn-youtube"
-          }
-        ]
-      },
-      {
-        "id": "yt-yt-TbeyQLzyA78",
-        "title": "หนังการ์ตูนอนิเมชั่นใหม่ พากย์ไทย 2023 HD พากย์ไทยเต็มเรื่อง",
-        "poster": "https://img.youtube.com/vi/TbeyQLzyA78/hqdefault.jpg",
-        "duration": "1:32:52",
-        "starting_price": "ดูฟรี 0 บ.",
-        "categories": [
-          "อนิเมะ",
-          "ดูฟรี",
-          "YouTube"
-        ],
-        "specs": {
-          "resolution": "1080p / 720p HD",
-          "audio": "พากย์ไทย"
-        },
-        "sources": [
-          {
-            "label": "▶ ดูฟรีบน YouTube",
-            "url": "https://www.youtube.com/watch?v=yt-TbeyQLzyA78",
-            "class": "btn-youtube"
-          }
-        ]
-      },
-      {
         "id": "yt-yt-ZJGogUP0YMI",
         "title": "หนังใหม่ 2021 |  การ์ตูนอนิเมชั่น | ไอซ์ เอจ 4 เจาะยุคน้ำแข็งมหัศจรรย์ กำเนิดแผ่นดินใหม่",
         "poster": "https://img.youtube.com/vi/ZJGogUP0YMI/hqdefault.jpg",
@@ -1897,10 +1759,10 @@
         ]
       },
       {
-        "id": "yt-yt-unW9gDO8VVo",
-        "title": "หนังใหม่ 2021 | ดูหนังชนโรง | ทอย สตอรี่ ภาค 4",
-        "poster": "https://img.youtube.com/vi/unW9gDO8VVo/hqdefault.jpg",
-        "duration": "1:57:24",
+        "id": "yt-yt-KQhvWIpBvFA",
+        "title": "หนังใหม่ 2025 เต็มเรื่อง พากย์ไทย ชนโรง ตำนานนักรบผู้พิทักษ์ดินแดนเวทมนตร์",
+        "poster": "https://img.youtube.com/vi/KQhvWIpBvFA/hqdefault.jpg",
+        "duration": "2:00:30",
         "starting_price": "ดูฟรี 0 บ.",
         "categories": [
           "อนิเมะ",
@@ -1914,16 +1776,16 @@
         "sources": [
           {
             "label": "▶ ดูฟรีบน YouTube",
-            "url": "https://www.youtube.com/watch?v=yt-unW9gDO8VVo",
+            "url": "https://www.youtube.com/watch?v=yt-KQhvWIpBvFA",
             "class": "btn-youtube"
           }
         ]
       },
       {
-        "id": "yt-yt-uJkv0V0fB_o",
-        "title": "หนังสนุกมาก อภินิหารเวทย์มนตราสุดมหัศจรรย์ พากย์ไทยพันธมิตร ชัดแจ๋ว",
-        "poster": "https://img.youtube.com/vi/uJkv0V0fB_o/hqdefault.jpg",
-        "duration": "1:42:50",
+        "id": "yt-yt-7p5ofQnCRVU",
+        "title": "การ์ตูนอนิเมชั่น พากย์ไทย กังฟูแพนด้า1 เต็มเรื่อง",
+        "poster": "https://img.youtube.com/vi/7p5ofQnCRVU/hqdefault.jpg",
+        "duration": "1:00:48",
         "starting_price": "ดูฟรี 0 บ.",
         "categories": [
           "อนิเมะ",
@@ -1937,16 +1799,16 @@
         "sources": [
           {
             "label": "▶ ดูฟรีบน YouTube",
-            "url": "https://www.youtube.com/watch?v=yt-uJkv0V0fB_o",
+            "url": "https://www.youtube.com/watch?v=yt-7p5ofQnCRVU",
             "class": "btn-youtube"
           }
         ]
       },
       {
-        "id": "yt-yt-pcHmtPOweQA",
-        "title": "การ์ตูน อนิเมชั่น จิ้วก้องโลก เต็มเรื่อง พากย์ไทย",
-        "poster": "https://img.youtube.com/vi/pcHmtPOweQA/hqdefault.jpg",
-        "duration": "1:21:42",
+        "id": "yt-yt-64DqV7v9VyI",
+        "title": "หนังใหม่ [2020]  พากย์ไทย เต็มเรื่อง",
+        "poster": "https://img.youtube.com/vi/64DqV7v9VyI/hqdefault.jpg",
+        "duration": "1:04:48",
         "starting_price": "ดูฟรี 0 บ.",
         "categories": [
           "อนิเมะ",
@@ -1960,7 +1822,7 @@
         "sources": [
           {
             "label": "▶ ดูฟรีบน YouTube",
-            "url": "https://www.youtube.com/watch?v=yt-pcHmtPOweQA",
+            "url": "https://www.youtube.com/watch?v=yt-64DqV7v9VyI",
             "class": "btn-youtube"
           }
         ]
@@ -1989,10 +1851,10 @@
         ]
       },
       {
-        "id": "yt-yt-7rsxgL0hgFQ",
-        "title": "หนังใหม่ 2019 พากย์ไทย HD ภาพยนตร์แอคชั่นที่ดีที่สุด #4",
-        "poster": "https://img.youtube.com/vi/7rsxgL0hgFQ/hqdefault.jpg",
-        "duration": "1:09:53",
+        "id": "yt-yt-m6KECrOdk9M",
+        "title": "ดูการ์ตูนออนไลน์HD 2018  ❤ มังกรน้อยจอมเปิ่น ❤ พากย์ไทย",
+        "poster": "https://img.youtube.com/vi/m6KECrOdk9M/hqdefault.jpg",
+        "duration": "1:22:16",
         "starting_price": "ดูฟรี 0 บ.",
         "categories": [
           "อนิเมะ",
@@ -2006,76 +1868,7 @@
         "sources": [
           {
             "label": "▶ ดูฟรีบน YouTube",
-            "url": "https://www.youtube.com/watch?v=yt-7rsxgL0hgFQ",
-            "class": "btn-youtube"
-          }
-        ]
-      },
-      {
-        "id": "yt-yt-tTWCUpxgr28",
-        "title": "หนังการ์ตูนเก่าๆ SD เต็มเรื่อง วิดีโอ (360p)",
-        "poster": "https://img.youtube.com/vi/tTWCUpxgr28/hqdefault.jpg",
-        "duration": "1:25:03",
-        "starting_price": "ดูฟรี 0 บ.",
-        "categories": [
-          "อนิเมะ",
-          "ดูฟรี",
-          "YouTube"
-        ],
-        "specs": {
-          "resolution": "1080p / 720p HD",
-          "audio": "พากย์ไทย"
-        },
-        "sources": [
-          {
-            "label": "▶ ดูฟรีบน YouTube",
-            "url": "https://www.youtube.com/watch?v=yt-tTWCUpxgr28",
-            "class": "btn-youtube"
-          }
-        ]
-      },
-      {
-        "id": "yt-yt-7iTtA-hdb9A",
-        "title": "หนังอนิเมชั่น ใหม่ปี2021 พากย์ไทย เต็มเรื่องตรงปก🐒🐒🐒🐒🐒 ชื่อหนังตามปกเลยนะ",
-        "poster": "https://img.youtube.com/vi/7iTtA-hdb9A/hqdefault.jpg",
-        "duration": "1:28:52",
-        "starting_price": "ดูฟรี 0 บ.",
-        "categories": [
-          "อนิเมะ",
-          "ดูฟรี",
-          "YouTube"
-        ],
-        "specs": {
-          "resolution": "1080p / 720p HD",
-          "audio": "พากย์ไทย"
-        },
-        "sources": [
-          {
-            "label": "▶ ดูฟรีบน YouTube",
-            "url": "https://www.youtube.com/watch?v=yt-7iTtA-hdb9A",
-            "class": "btn-youtube"
-          }
-        ]
-      },
-      {
-        "id": "yt-yt-Q1jImbb3wSc",
-        "title": "[Thai Anime Tales] พากย์ไทย 💕ยุค60 ยามป่าตื่นพลังได้ยินสัตว์ ช่วยสัตว์ได้สมุนไพรตอบแทน",
-        "poster": "https://img.youtube.com/vi/Q1jImbb3wSc/hqdefault.jpg",
-        "duration": "1:52:41",
-        "starting_price": "ดูฟรี 0 บ.",
-        "categories": [
-          "อนิเมะ",
-          "ดูฟรี",
-          "YouTube"
-        ],
-        "specs": {
-          "resolution": "1080p / 720p HD",
-          "audio": "พากย์ไทย"
-        },
-        "sources": [
-          {
-            "label": "▶ ดูฟรีบน YouTube",
-            "url": "https://www.youtube.com/watch?v=yt-Q1jImbb3wSc",
+            "url": "https://www.youtube.com/watch?v=yt-m6KECrOdk9M",
             "class": "btn-youtube"
           }
         ]
